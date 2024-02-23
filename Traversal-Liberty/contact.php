@@ -1,93 +1,6 @@
-<!doctype html>
-<html lang="zxx">
-
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Traversal Travel Category Bootstrap Responsive Template | Contact </title>
-  <!-- google fonts -->
-  <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link href="//fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap"
-    rel="stylesheet">
-  <!-- google fonts -->
-  <!-- Template CSS -->
-  <link rel="stylesheet" href="assets/css/style-liberty.css">
-  <!-- Template CSS -->
-</head>
-
-<body>
-  <!--header-->
-  <header id="site-header" class="fixed-top">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg stroke">
-        <h1><a class="navbar-brand mr-lg-5" href="index.html">
-            Traversal
-          </a></h1>
-        <!-- if logo is image enable this   
-      <a class="navbar-brand" href="#index.html">
-          <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-      </a> -->
-        <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
-          data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
-          <span class="navbar-toggler-icon fa icon-close fa-times"></span>
-          </span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="services.html">Destinations</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pricing.html">Packages</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Blog<span class="fa fa-angle-down"></span>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                <a class="dropdown-item" href="blog.html">Blog Posts</a>
-                <a class="dropdown-item" href="blog-single.html">Blog single</a>
-                <a class="dropdown-item" href="landing-single.html">Landing Page</a>
-              </div>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-
-          </ul>
-        </div>
-        <div class="d-lg-block d-none">
-          <a href="contact.html" class="btn btn-style btn-secondary">Get In Touch</a>
-        </div>
-        <!-- toggle switch for light and dark theme -->
-        <div class="mobile-position">
-          <nav class="navigation">
-            <div class="theme-switch-wrapper">
-              <label class="theme-switch" for="checkbox">
-                <input type="checkbox" id="checkbox">
-                <div class="mode-container">
-                  <i class="gg-sun"></i>
-                  <i class="gg-moon"></i>
-                </div>
-              </label>
-            </div>
-          </nav>
-        </div>
-        <!-- //toggle switch for light and dark theme -->
-      </nav>
-    </div>
-  </header>
+<?php 
+$page="Contact";
+include('inc/head.php') ?>
   <!-- //header -->
   <!-- about breadcrumb -->
   <section class="w3l-about-breadcrumb text-left">
@@ -239,34 +152,12 @@
       <button onclick="topFunction()" id="movetop" title="Go to top">
         <span class="fa fa-angle-up"></span>
       </button>
-      <script>
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
-          scrollFunction()
-        };
-  
-        function scrollFunction() {
-          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            document.getElementById("movetop").style.display = "block";
-          } else {
-            document.getElementById("movetop").style.display = "none";
-          }
-        }
-  
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
-        }
-      </script>
-      <!-- //move top -->
-      <script>
-        $(function () {
-          $('.navbar-toggler').click(function () {
-            $('body').toggleClass('noscroll');
-          })
-        });
-      </script>
+      <?php
+include('inc/scripts.php');
+?>
+<?php
+include('inc/footer.php');
+?>
     </section>
     <!-- //footer -->
   </footer>

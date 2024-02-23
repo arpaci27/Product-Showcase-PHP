@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Easly Trade | Home </title>
+  <title><?php echo $page ?> | Easly Trade </title>
   <!-- google fonts -->
   <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="//fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap"
@@ -22,7 +22,7 @@
   <header id="site-header" class="fixed-top">
     <div class="container">
       <nav class="navbar navbar-expand-lg stroke">
-        <h1><a class="navbar-brand mr-lg-5" href="index.html">
+        <h1><a class="navbar-brand mr-lg-5" href="Home">
           Easly Trade
           </a></h1>
         <!-- if logo is image enable this   
@@ -40,30 +40,24 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="Home">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">Contact</a>
+              <a class="nav-link" href="Contact">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="services.html">About Us</a>
+              <a class="nav-link" href="About">About Us</a>
             </li>
+   
             <li class="nav-item">
-              <a class="nav-link" href="pricing.html">Yarn</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Knitwear</a>
+              <a class="nav-link" href="Products">Products
+
+              </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Catalogs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html"></a>
-            </li>
-            <li class="nav-item">
-              <i class="flag flag-us"></i>
-            </li>
+            
+            
           </ul>
         </div>
         <div class="d-lg-block d-none">
