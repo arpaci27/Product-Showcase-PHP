@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Traversal Travel Category Bootstrap Responsive Template | Home </title>
+  <title>Easly Trade | Home </title>
   <!-- google fonts -->
   <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="//fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap"
@@ -13,6 +13,7 @@
   <!-- google fonts -->
   <!-- Template CSS -->
   <link rel="stylesheet" href="assets/css/style-liberty.css">
+  
   <!-- Template CSS -->
 </head>
 
@@ -22,7 +23,7 @@
     <div class="container">
       <nav class="navbar navbar-expand-lg stroke">
         <h1><a class="navbar-brand mr-lg-5" href="index.html">
-            Traversal
+          Easly Trade
           </a></h1>
         <!-- if logo is image enable this   
       <a class="navbar-brand" href="#index.html">
@@ -42,29 +43,27 @@
               <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="about.html">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="services.html">Destinations</a>
+              <a class="nav-link" href="services.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pricing.html">Packages</a>
+              <a class="nav-link" href="pricing.html">Yarn</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Blog<span class="fa fa-angle-down"></span>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                <a class="dropdown-item" href="blog.html">Blog Posts</a>
-                <a class="dropdown-item" href="blog-single.html">Blog single</a>
-                <a class="dropdown-item" href="landing-single.html">Landing Page</a>
-              </div>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Knitwear</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="contact.html">Catalogs</a>
             </li>
-
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html"></a>
+            </li>
+            <li class="nav-item">
+              <i class="flag flag-us"></i>
+            </li>
           </ul>
         </div>
         <div class="d-lg-block d-none">
@@ -142,7 +141,7 @@
     <div class="container py-md-5">
       <div class="title-content text-left mb-lg-5 mb-4">
         <h6 class="sub-title">Visit</h6>
-        <h3 class="hny-title">Popular Destinations</h3>
+        <h3 class="hny-title">Popular Products</h3>
       </div>
       <div class="row bottom-ab-grids">
   <!--/row-grids-->
