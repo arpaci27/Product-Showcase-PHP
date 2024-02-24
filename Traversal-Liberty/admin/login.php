@@ -23,10 +23,30 @@
                                         <?php 
                                         session_start();
                                         include("../inc/db.php");
-
+                                        $username="";
                                         if(isset($_SESSION['Oturum']) && $_SESSION["Oturum"]==6789){
                                             header("Location: index.php");
                                         }
+                                        elseif(isset($_COOKIE["cookie"])){
+                                            $sorgu=$baglanti->prepare("SELECT username, permission FROM users WHERE active=1 ");
+                                            $sorgu->execute();
+                                           while($sonuc=$sorgu->fetch()){
+                                            if($_COOKIE["cookie"]==md5(md5($password)))
+                                            {   
+                                                $_SESSION["Oturum"]=6789;
+                                                $_SESSION["username"]=$sonuc["username"];
+                                                $_SESSION["permission"]= $sonuc["permission"];
+                                                header("Location: index.php");
+                                            
+
+                                            }
+                                           }
+                                        }
+
+
+
+
+
 
                                         if($_POST){
                                             $username=$_POST["txtUname"];
@@ -44,6 +64,10 @@
                                                 <input class="form-control" id="password" name=" txtPassword" type="password" placeholder="Password" />
                                                 <label for="inputPassword">Password</label>
                                             </div>
+                                            <div class="form-floating mb-3">
+                                                <img src="../inc/captcha.php" alt="">
+                                                <input class="form-control" id="password" name=" captcha" type="text" placeholder="Security Code" />
+                                            </div>
                                             <div class="form-check mb-3">
                                                 <input class="form-check-input" id="inputRememberPassword" type="checkbox" name="cbRemembers" value="" />
                                                 <label class="form-check-label" for="inputRememberPassword">Remember Password</label>
@@ -57,6 +81,8 @@
                                         <script type="text/javascript" src="../assets/js/sweetalert2.all.min.js"> </script>
                                         <?php 
                                         if($_POST){
+                                            if($_SESSION['captcha']==$_POST['captcha']){
+
                                             $sorgu=$baglanti->prepare("SELECT password, permission FROM users WHERE username=:username AND active=1 ");
                                             $sorgu->execute([
                                                 'username'=>htmlspecialchars($username)
@@ -73,9 +99,13 @@
                                                 }
                                                 header("Location: index.php");
                                         }else{
-                                            echo "<script> Swal.fire( 'Error!', 'User name or password is wrong', 'error')
+                                            echo "<script> Swal.fire( 'Error!', 'User name or password is wrong!', 'error')
                                             </script>" ;
-                                        }}
+                                        }
+                                    }}else{
+                                        echo "<script> Swal.fire( 'Error!', 'Security Code is wrong!', 'error')
+                                        </script>" ;
+                                    }
                                         ?>
                                     </div>
                                     <div class="card-footer text-center py-3">
