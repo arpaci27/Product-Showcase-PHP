@@ -1,7 +1,11 @@
 <?php
 $page="Home";
 include('inc/db.php');
-include ("inc/head.php") ?>
+include ("inc/head.php");
+$sorgu = $baglanti->prepare("SELECT * FROM homepage");
+$sorgu -> execute();
+$sonuc = $sorgu->fetch();
+?>
 
   <!-- //header -->
   <!--banner-slider-->
@@ -14,8 +18,12 @@ include ("inc/head.php") ?>
         <div class="demo-inner-content">
           <div class="container">
             <div class="banner-infhny">
-              <h3>You don't need to go far to find what matters.</h3>
-              <h6 class="mb-3">Discover your next adventure</h6>
+              <h3><?php 
+              echo $sonuc["firstTitle"];
+              ?></h3>
+              <h6 class="mb-3"><?php 
+              echo $sonuc["firstLittleTitle"];
+              ?></h6>
               
             </div>
           </div>
@@ -181,10 +189,12 @@ include ("inc/head.php") ?>
         <div class="col-lg-9 col-md-10 ml-auto">
           <div class="bottom-info ml-auto">
             <div class="header-section text-left">
-              <h3 class="hny-title two">Traveling makes a man wiser, but less happy.</h3>
-              <p class="mt-3 pr-lg-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit beatae laudantium
-                voluptate rem ullam dolore nisi voluptatibus esse quasi. Integer sit amet .Lorem ipsum dolor sit
-                amet adipisicing elit.</p>
+              <h3 class="hny-title two"><?php 
+              echo $sonuc["secondTitle"];
+              ?></h3>
+              <p class="mt-3 pr-lg-5"><?php 
+              echo $sonuc["littleDescription"];
+              ?></p>
               <a href="about.php" class="btn btn-style btn-secondary mt-5">Read More</a>
             </div>
            

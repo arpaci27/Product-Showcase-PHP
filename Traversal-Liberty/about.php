@@ -1,6 +1,11 @@
 <?php
 $page="About Us";
+include('inc/db.php');
 include('inc/head.php');
+
+$sorgu = $baglanti->prepare("SELECT * FROM aboutus");
+$sorgu->execute();
+$sonuc = $sorgu->fetch();
 ?>
   <!-- //header -->
   <!-- about breadcrumb -->
@@ -21,10 +26,11 @@ include('inc/head.php');
       <div class="container py-lg-5">
         <div class="ab-section text-center">
           <h6 class="sub-title">About Us</h6>
-          <h3 class="hny-title">Travel to make memories all around the world.</h3>
-          <p class="py-3 mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum labore sed, veniam nisi sunt laboriosam ducimus, odio
-            aspernatur fugiat minima blanditiis dignissimos.</p>
-            <a href="services.html" class="btn btn-style btn-primary">Read More</a>
+          <h3 class="hny-title"><?php echo $sonuc["FirstTitle"] ?>.</h3>
+          <p class="py-3 mb-3"><?php 
+              echo $sonuc["FirstText"];
+              ?></p>
+            <a href="services.html" class="btn btn-style btn-primary">See the products</a>
         </div>
         <div class="row mt-5">
           <div class="col-md-9 mx-auto">
@@ -40,14 +46,15 @@ include('inc/head.php');
       <div class="row">
         <div class="col-lg-6 content-6-left pr-lg-5">
           <h6 class="sub-title">Why Choose Us</h6>
-          <h3 class="hny-title">Life begins at the end of your comfort zone.</h3>
+          <h3 class="hny-title"><?php 
+              echo $sonuc["SecondTitle"];
+              ?></h3>
         </div>
         <div class="col-lg-6 content-6-right mt-lg-0 mt-4">
-          <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum labore sed, veniam nisi sunt laboriosam ducimus, odio
-            aspernatur fugiat minima blanditiis dignissimos.</p>
-            <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum labore sed, veniam nisi sunt laboriosam ducimus, odio
-              aspernatur fugiat minima blanditiis dignissimos.</p>
-              <a href="services.html" class="btn btn-style btn-primary mt-4">Read More</a>
+          <p class="mb-3"><?php 
+              echo $sonuc["SecondText"];
+              ?></p>
+              <a href="products.php" class="btn btn-style btn-primary mt-4">See the products</a>
         </div>
       </div>
     </div>
@@ -57,25 +64,19 @@ include('inc/head.php');
   <div class="hny-three-grids py-5">
     <div class="container py-lg-5">
       <div class="row">
+        <?php
+      require_once('inc/db.php');
+  $sql = "SELECT * FROM products LIMIT 3";
+  $all_products = $baglanti->query($sql);
+  while($row = $all_products->fetch()){?>
         <div class="col-md-4 col-sm-6 mt-0 grids5-info">
           <a href="#url"><img src="assets/images/g1.jpg" class="img-fluid" alt=""></a>
           <h5>Lorem</h5>
-          <h4><a href="#url">Investor Relations</a></h4>
+          <h4><a href="#url"> <?php echo $row["ProductName"] ?></a></h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam esse? dolores impedit doloremque.</p>
         </div>
-        <div class="col-md-4 col-sm-6 mt-sm-0 mt-5 grids5-info">
-          <a href="#url"><img src="assets/images/g2.jpg" class="img-fluid" alt=""></a>
-          <h5>Lorem</h5>
-          <h4><a href="#url"> 
-            Partner With Care</a></h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam esse? dolores impedit doloremque.</p>
-        </div>
-        <div class="col-md-4 col-sm-6 mt-md-0 mt-5 grids5-info">
-          <a href="#url"><img src="assets/images/g3.jpg" class="img-fluid" alt=""></a>
-          <h5>Lorem</h5>
-          <h4><a href="#url">Customer Care</a></h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam esse? dolores impedit doloremque.</p>
-        </div>
+       <?php
+       } ?> 
       </div>
     </div>
   </div>
@@ -85,21 +86,7 @@ include('inc/head.php');
     <div class="container py-lg-5 py-md-4">
       <div class="w3-stats-inner-info">
         <div class="row">
-          <div class="col-lg-4 col-6 stats_info counter_grid text-left">
-            <span class="fa fa-smile-o"></span>
-            <p class="counter">1730</p>
-            <h4>Happy Customers</h4>
-          </div>
-          <div class="col-lg-4 col-6 stats_info counter_grid1 text-left">
-            <span class="fa fa-users"></span>
-            <p class="counter">730</p>
-            <h4>Custom Products</h4>
-          </div>
-          <div class="col-lg-4 col-6 stats_info counter_grid mt-lg-0 mt-5 text-left">
-            <span class="fa fa-database"></span>
-            <p class="counter">30</p>
-            <h4>branches</h4>
-          </div>
+          
         </div>
       </div>
     </div>
