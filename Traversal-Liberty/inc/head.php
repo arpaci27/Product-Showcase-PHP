@@ -22,7 +22,7 @@
   <header id="site-header" class="fixed-top">
     <div class="container">
       <nav class="navbar navbar-expand-lg stroke">
-        <h1><a class="navbar-brand mr-lg-5" href="Home">
+        <h1><a class="navbar-brand mr-lg-5" href="index.php">
           Easly Trade
           </a></h1>
         <!-- if logo is image enable this   
@@ -40,17 +40,17 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="Home">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Contact">Contact</a>
+              <a class="nav-link" href="contact.php">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="About">About Us</a>
+              <a class="nav-link" href="about.php">About Us</a>
             </li>
    
             <li class="nav-item">
-              <a class="nav-link" href="Products">Products
+              <a class="nav-link" href="products.php">Products
 
               </a>
             </li>
