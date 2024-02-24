@@ -1,6 +1,11 @@
 <?php 
 $page="Contact";
-include('inc/head.php') ?>
+include('inc/db.php');
+$tanimlama = "contactpage";
+$key = "contact";
+include('inc/head.php');
+session_start();
+ ?>
   <!-- //header -->
   <!-- about breadcrumb -->
   <section class="w3l-about-breadcrumb text-left">
@@ -39,25 +44,90 @@ include('inc/head.php') ?>
           </div>
         </div>
         <div class="col-lg-6 mt-lg-0 mt-5 contact-right">
-          <form action="https://sendmail.w3layouts.com/submitForm" method="post" class="signin-form">
+          <form action="contact.php" id="contactform" name="sendMessage" method="post" class="signin-form">
             <div class="input-grids">
               <div class="form-group">
-                <input type="text" name="w3lName" id="w3lName" placeholder="Your Name*" class="contact-input" />
+                <input type="text" name="txtName" id="name" placeholder="Your Name*" class="contact-input" />
               </div>
               <div class="form-group">
-                <input type="email" name="w3lSender" id="w3lSender" placeholder="Your Email*" class="contact-input" required="" />
+                <input type="email" name="txtEmail" id="email" placeholder="Your Email*" class="contact-input" required="" />
               </div>
               <div class="form-group">
-                <input type="text" name="w3lSubect" id="w3lSubect" placeholder="Subject*" class="contact-input" />
+                <img src="inc/captcha.php" alt="">
+                <input type="text" class="form-control" placeholder="Enter code" name="captcha"required="required" ></input>
               </div>
             </div>
             <div class="form-group">
-              <textarea name="w3lMessage" id="w3lMessage" placeholder="Type your message here*" required=""></textarea>
+              <textarea name="txtMessage" id="message" placeholder="Type your message here*" required=""></textarea>
             </div>
             <div class="text-right">
-              <button class="btn btn-style btn-primary">Send Message</button>
+              <button class="btn btn-style btn-primary" id="sendMessageButton" type="submit">Send Message</button>
             </div>
           </form>
+          <script type="text/javascript" src="assets/js/sweetalert2.all.min.js"> </script>
+          <?php 
+        if($_POST){
+            if($_SESSION["captcha"] == $_POST["captcha"]){
+             
+
+            $sorgu = $baglanti->prepare("INSERT INTO contactform SET name=:name, email=:email, message=:message");
+            $ekle=$sorgu->execute(
+            [
+              "name"=>htmlspecialchars($_POST["txtName"]),
+              "email"=>htmlspecialchars($_POST["txtEmail"]),
+              "message"=>htmlspecialchars($_POST["txtMessage"]),
+            ]);
+
+            if($ekle){
+
+
+              function mailgonder(){
+                require "inc/class.phpmailer.php"; // PHPMailer dosyamızı çağırıyoruz  
+                $mail = new PHPMailer();
+                $mail->IsSMTP();
+                $mail->From     = "deneme@mesutd.com"; //Gönderen kısmında yer alacak e-mail adresi  
+                $mail->Sender   = $_POST["txtEmail"];
+                $mail->FromName = $_POST["txtName"];
+                $mail->Host     = "mail.mesutd.com"; //SMTP server adresi  
+                $mail->SMTPAuth = true;
+                $mail->Username = "deneme@mesutd.com"; //SMTP kullanıcı adı  
+                $mail->Password = "*****"; //SMTP şifre  
+                $mail->SMTPSecure="";
+                $mail->Port = "587";
+                $mail->CharSet = "utf-8";
+                $mail->WordWrap = 50;
+                $mail->IsHTML(true); //Mailin HTML formatında hazırlanacağını bildiriyoruz.  
+                $mail->Subject  = "Konu";
+            
+                $mail->Body = "mesaj";
+                $mail->AltBody = strip_tags("mesaj");
+                $mail->AddAddress("deneme@mesutd.com");
+                return ($mail->Send())?true:false;
+                $mail->ClearAddresses();
+                $mail->ClearAttachments();
+
+
+
+
+
+
+
+
+
+
+
+              echo "<script> Swal.fire( 'Success!', 'Your message has been sent successfully!', 'success')
+                </script>" ;
+          } 
+          
+          }else{
+            echo "<script> Swal.fire( 'Error!', 'Your message could not be sent!', 'error')
+                </script>" ;
+        }
+        }}
+          
+
+          ?>
         </div>
 
       </div>
@@ -81,9 +151,8 @@ include('inc/footer.php');
       <?php
 include('inc/scripts.php');
 ?>
-  
  
-
+      
 </body>
 
 </html>

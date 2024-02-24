@@ -45,7 +45,7 @@ $sonuc = $sorgu->fetch();
   <!--/row-grids-->
   <?php 
   require_once('inc/db.php');
-  $sql = "SELECT * FROM products";
+  $sql = "SELECT * FROM products LIMIT 5";
   $all_products = $baglanti->query($sql);
   while($row = $all_products->fetch()){
 
@@ -69,7 +69,7 @@ $sonuc = $sorgu->fetch();
               </div>
             </a>
           </div>
-        </div>
+        </div><br>
         <?php } ?>
           <!--//row-grids-->
       </div>
