@@ -103,10 +103,10 @@ $sonuc = $sorgu->fetch();
         <div class="row">
           <div class="col-lg-3 col-6 mt-lg-5 mt-4">
             <div class="box16">
-              <a href="#url"><img src="assets/images/team1.jpg" alt="" class="img-fluid" /></a>
+              <a href="#url"><img src="assets/images/ÜRÜN GÖRSELLERİ/Product 1.1.jpeg" alt="" class="img-fluid" /></a>
               <div class="box-content">
-                <h3 class="title"><a href="#url">Alexander</a></h3>
-                <span class="post">Description</span>
+                <h3 class="title"><a href="#url">DENIM</a></h3>
+                <span class="post">See Details</span>
                 <ul class="social">
                   <li>
                     <a href="#" class="facebook">
@@ -122,69 +122,7 @@ $sonuc = $sorgu->fetch();
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-6 mt-lg-5 mt-4">
-            <div class="box16">
-              <a href="#url"><img src="assets/images/team2.jpg" alt="" class="img-fluid" /></a>
-              <div class="box-content">
-                <h3 class="title"><a href="#url">Victoria</a></h3>
-                <span class="post">Description</span>
-                <ul class="social">
-                  <li>
-                    <a href="#" class="facebook">
-                      <span class="fa fa-facebook-f"></span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="twitter">
-                      <span class="fa fa-twitter"></span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6 mt-lg-5 mt-4">
-            <div class="box16">
-              <a href="#url"><img src="assets/images/team3.jpg" alt="" class="img-fluid" /></a>
-              <div class="box-content">
-                <h3 class="title"><a href="#url">Smith roy</a></h3>
-                <span class="post">Description</a></span>
-                <ul class="social">
-                  <li>
-                    <a href="#" class="facebook">
-                      <span class="fa fa-facebook-f"></span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="twitter">
-                      <span class="fa fa-twitter"></span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6 mt-lg-5 mt-4">
-            <div class="box16">
-              <a href="#url"><img src="assets/images/team4.jpg" alt="" class="img-fluid" /></a>
-              <div class="box-content">
-                <h3 class="title"><a href="#url">Johnson</a></h3>
-                <span class="post">Description</a></span>
-                <ul class="social">
-                  <li>
-                    <a href="#" class="facebook">
-                      <span class="fa fa-facebook-f"></span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="twitter">
-                      <span class="fa fa-twitter"></span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>

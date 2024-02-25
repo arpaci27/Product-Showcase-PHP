@@ -18,7 +18,7 @@ $sonuc = $sorgu->fetch();
                                 <i class="fas fa-table me-1"></i>
                             </div>
                             <div class="card-body">
-                                <table id="datatablesSimple">
+                                <table id="datatablesSimple" class="table table-bordered">
                                     <thead>
                                         <tr>
                                             <th>First Title</th>
