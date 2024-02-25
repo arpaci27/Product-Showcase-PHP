@@ -3,7 +3,7 @@ session_start();
 if(!(isset($_SESSION["Oturum"]) || $_SESSION["Oturum"]==6789)){
     header("Location: login.php");
 }
-
+include("../inc/db.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

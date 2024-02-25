@@ -3,7 +3,7 @@
 <?php
 $sayfa="Delete Page";
 include("inc/ahead.php");
-
+include("../inc/db.php");
 if($_SESSION["permission"]!=1){
     echo "<script> Swal.fire( {
         title: 'Error!',
@@ -12,7 +12,27 @@ if($_SESSION["permission"]!=1){
         confirmButtonText: 'I understand'
     }).then((value)=>{
         if(value.isConfirmed){
-            window.location.href='homepage.php'}})</script>";
+            window.location.href='index.php'}})</script>";
+            exit;
+}
+
+
+if($_GET){
+    $table=$_GET["table"];
+    $ID=(int)$_GET["ID"]; 
+
+    $sorgu =$baglanti->prepare("DELETE FROM $table WHERE ID=:ID");
+    $sonuc=$sorgu->execute(['ID'=>$ID]);
+    if($sonuc){
+        echo "<script> Swal.fire( {
+            title: 'Succes!',
+            text: 'Deleted!',
+            icon: 'success',
+            confirmButtonText: 'I understand'
+        }).then((value)=>{
+            if(value.isConfirmed){
+                window.location.href='$table.php'}})</script>";
+    }
 }
 ?>
 

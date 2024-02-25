@@ -13,7 +13,7 @@ include("../inc/db.php");
 
         <div class="card mb-4">
             <div class="card-header">
-                <i class="fas fa-table me-1"></i>
+               <a href="addproducts.php" class="btn btn-primary">Add Product</a>
             </div>
             <div class="card-body">
                 <table id="dataTable" class="table table-bordered text-left text-center">
@@ -22,6 +22,8 @@ include("../inc/db.php");
                             <th>No</th>
                             <th>Product Name</th>
                             <th>Product Image</th>
+                            <th>Link</th>
+
                               <th>Description</th>
                             <th>Active</th>
                         </tr>
@@ -39,6 +41,8 @@ include("../inc/db.php");
                                 <td>
                                     <img src="../assets/images/ÜRÜN GÖRSELLERİ/<?php echo $sonuc["ProductImage"] ?>" width="160" height="180" alt="">
                                 </td>
+                                <td><?php echo $sonuc["Link"] ?></td>
+                                
                                 <td><?php echo $sonuc["Description"] ?></td>
                                 <td><span class="fa fa-2x fa-<?php echo $sonuc['Active'] == "1" ? "check text-succes" : "times"  ?>"></span></td>
                                 <td class="text-center">
@@ -66,7 +70,7 @@ include("../inc/db.php");
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        <a href="delete.php?ID=<?php echo $sonuc['ID'] ?>&table=referance" class="btn btn-danger">Delete</a>
+        <a href="delete.php?ID=<?php echo $sonuc['ID'] ?>&table=products" class="btn btn-danger">Delete</a>
       </div>
     </div>
   </div>
