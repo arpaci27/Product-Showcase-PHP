@@ -55,7 +55,7 @@ $sonuc = $sorgu->fetch();
             <a href="#" class="card_title p-lg-4d-block">
               <div class="row align-items-center">
                 <div class="col-sm-5 subject-img">
-                  <img src="assets/images/g1.jpg" class="img-fluid" alt="">
+                  <img src="assets/images/ÜRÜN GÖRSELLERİ/<?php $row["ProductImage"] ?>" class="img-fluid" alt="">
                 </div>
                 <div class="col-sm-7 subject-content mt-sm-0 mt-4">
                   <h4><?php echo $row["ProductName"] ?></h4>

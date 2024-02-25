@@ -35,8 +35,12 @@ $sonuc = $sorgu->fetch();
                                             <td><?php echo $sonuc["firstLittleTitle"]?></td>
                                             <td><?php echo $sonuc["secondTitle"]?></td>
                                             <td><?php echo $sonuc["littleDescription"]?></td>
-                                            <td class="text-center"><a href="homepageedit.php?ID=<?=$sonuc["ID"]?>">
-                                            <span class="fa fa-edit fa-2x"></span></a></td>
+                                            <td class="text-center">
+                                                    <?php if($_SESSION['permission']==1){  ?>
+                                            <a href="homepageedit.php?ID=<?=$sonuc["ID"]?>">
+                                            <span class="fa fa-edit fa-2x"></span></a>
+                               <?php } ?>         
+                                        </td>
                                         </tr>
                                         
                                     </tbody>

@@ -3,8 +3,8 @@ $page="Products";
 include('inc/head.php');
 
 require_once('inc/db.php');
-$sql = "SELECT * FROM products";
-$all_products = $baglanti->query($sql);
+$sorgu = $baglanti->prepare("SELECT * FROM products");
+                                        $sorgu -> execute();
 ?>
   <!-- //header -->
   <!-- about breadcrumb -->
@@ -27,15 +27,15 @@ $all_products = $baglanti->query($sql);
           <h3 class="hny-title mb-5">Products</h3>
           <div class="row">
             <?php 
-            while($row = $all_products->fetch()){
+            while($sonuc=$sorgu->fetch()){
 
             
             ?>
               <div class="col-lg-4 col-md-4 col-6">
                   <div class="column">
-                      <a href="blog-single.php"><img src="assets/images/g1.jpg" alt="" class="img-fluid"></a>
+                      <a href="blog-single.php"><img src="assets/images/ÜRÜN GÖRSELLERİ/<?php echo $sonuc["ProductImage"]?>" alt=""  class="img-fluid"></a>
                       <div class="info">
-                          <h4><a href="blog-single.php"><?php echo $row["ProductName"];?></a></h4>
+                          <h4><a href="blog-single.php"><?php echo $sonuc["ProductName"];?></a></h4>
                           <p>See Details </p>
                           <div class="dst-btm">
                             <h6 class="">Start From </h6>
