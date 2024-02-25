@@ -34,7 +34,7 @@ $sonuc = $sorgu->fetch();
         </div>
         <div class="row mt-5">
           <div class="col-md-9 mx-auto">
-            <img src="assets/images/banner3.jpg" class="img-fluid" alt="">
+            <img src="assets/images/image(4).png" class="img-fluid" alt="">
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@ $sonuc = $sorgu->fetch();
   $all_products = $baglanti->query($sql);
   while($row = $all_products->fetch()){?>
         <div class="col-md-4 col-sm-6 mt-0 grids5-info">
-          <a href="#url"><img src="assets/images/g1.jpg" class="img-fluid" alt=""></a>
+          <a href="#url"><img src="assets/images/ÜRÜN GÖRSELLERİ/<?= $row["ProductImage"] ?>" class="img-fluid" alt=""></a>
           <h5>Lorem</h5>
           <h4><a href="#url"> <?php echo $row["ProductName"] ?></a></h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam esse? dolores impedit doloremque.</p>
