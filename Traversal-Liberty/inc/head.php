@@ -55,7 +55,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Catalogs</a>
+              <a class="nav-link" href="catalogs.php">Catalogs</a>
             
             
           </ul>

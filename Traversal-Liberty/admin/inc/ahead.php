@@ -30,8 +30,8 @@ include("../inc/db.php");
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                  <!--  <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>-->
                 </div>
             </form>
             <!-- Navbar-->
@@ -93,7 +93,22 @@ include("../inc/db.php");
                                     <a class="nav-link" href="products.php">Products</a>
                                 </nav>
                             </div>
-                         
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="contactform.php">Contact Form</a>
+                                </nav>
+                            </div>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="aboutus.php">About</a>
+                                </nav>
+                            </div>
+                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <?php if ($_SESSION['permission'] == 1) {  ?>
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="users.php">Users</a>
+                                </nav> <?php } ?>
+                            </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
                         <?php echo $_SESSION['username'] ?>

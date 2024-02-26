@@ -13,41 +13,27 @@ if($_SESSION["permission"]!=1){
             window.location.href='products.php'}})</script>";
 }
 include("../inc/db.php");
+$id=$_GET["ID"];
+$sorgu = $baglanti->prepare("SELECT * FROM products WHERE ID=:ID");
+$sorgu->execute(['ID'=>$id]);
+$sonuc = $sorgu->fetch();
 
 if($_POST){
-
+    $foto="";
     $hata = "";
     $Active=0;
     if(isset($_POST["Active"])){
         $Active=1;
     }
     else{$hata="";}
-    if(isset($_POST["Link"]) !="" && isset($_POST['Description']) !="" && isset($_FILES["ProductImage"]["name"]) != ""){
+    if(($_POST["Link"]) !="" && ($_POST['Description']) !="" && ($_FILES["ProductImage"]["name"]) != ""){
         
         if($_FILES['ProductImage']['error'] != 0){
             $hata.="Image is not selected.";
         }else{
             copy($_FILES['ProductImage']['tmp_name'], "../assets/images/ÜRÜN GÖRSELLERİ/".strtolower($_FILES['ProductImage']['name']));
-            $ekleSorgu =$baglanti->prepare("INSERT INTO products SET ProductName=:ProductName, Description=:Description, ProductImage=:ProductImage, Link=:Link,  Active=:Active ");
-            $ekle=$ekleSorgu->execute([
-                'ProductName'=>($_POST['ProductName']),
-                'ProductImage'=>strtolower($_FILES['ProductImage']['name']),
-                'Link'=>($_POST['Link']),
-                'Description'=>($_POST['Description']),
-                'Active'=>$Active,
-            ]);   
-            
-            if($ekle){
-                echo "<script> Swal.fire( {
-                    title: 'Added',
-                    text: 'New Product Has Added.',
-                    icon: 'success',
-                    confirmButtonText: 'I understand'
-                }).then((value)=>{
-                    if(value.isConfirmed){
-                        window.location.href='products.php'}})</script>";
- 
-}    
+            //unlink("../assets/images/ÜRÜN GÖRSELLERİ/".$sonuc['ProductImage']);
+            $foto=strtolower($_FILES['ProductImage']['name']);
         }
         if($hata !=''){
             echo "<script> Swal.fire( {
@@ -59,9 +45,31 @@ if($_POST){
                 if(value.isConfirmed){
                     window.location.href='products.php'}})</script>";
         
-        }  
+        }
+    }else{
+        $foto=$sonuc["ProductImage"];
     }
-
+    if(isset($_POST["Link"]) !="" && ($_POST['Description']) !="" && $hata==""){
+        $guncelleSorgu = $baglanti->prepare("UPDATE products SET ProductName=:ProductName,
+         Description=:Description, ProductImage=:ProductImage, Link=:Link,  Active=:Active WHERE ID=:ID");
+         $guncelle=$guncelleSorgu->execute([
+             'ProductName'=>($_POST['ProductName']),
+             'ProductImage'=> $foto,
+             'Link'=>($_POST['Link']),
+             'Description'=>($_POST['Description']),
+             'Active'=>$Active,
+             'ID'=>$id
+         ]);
+    }if($guncelle){
+        echo "<script> Swal.fire( {
+            title: 'Succes!',
+            text: 'The product Updated!',
+            icon: 'success',
+            confirmButtonText: 'I understand'
+        }).then((value)=>{
+            if(value.isConfirmed){
+                window.location.href='products.php'}})</script>";
+    }
    
 }
 
@@ -69,9 +77,9 @@ if($_POST){
 ?>
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Add Products</h1>
+                        <h1 class="mt-4">Update Product</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Dashboard - Add Products</li>
+                            <li class="breadcrumb-item active">Dashboard - Update Product</li>
                         </ol>
                      
                         <div class="card mb-4">
@@ -84,39 +92,40 @@ if($_POST){
                                     <br>
 
                                         <label>Product's Name</label>
-                                        <input type="text" class="form-control" required name="ProductName" >
+                                        <input type="text" class="form-control" required name="ProductName" value="<?= $sonuc["ProductName"] ?>">
 
                                     </div>
                                     <br>
 
                                     <div class="form-group">
+                                        <img src="../assets/images/ÜRÜN GÖRSELLERİ/<?= $sonuc['ProductImage'] ?>" width="160" height="180" alt="">
                                         <label>Product's Image</label>
-                                        <input type="file" class="form-control" required name="ProductImage" >
+                                        <input type="file" class="form-control"  name="ProductImage" >
 
                                     </div>
                                     <br>
 
                                     <div class="form-group">
                                         <label>Product Link</label>
-                                        <input type="text" class="form-control" required name="Link" value="<?= @$_POST["Link"] ?>" >
+                                        <input type="text" class="form-control" required name="Link" value="<?= $sonuc["Link"] ?>" >
 
                                     </div>
                                     <br>
 
                                     <div class="form-group">
                                         <label>Description</label>
-                                        <input type="text" class="form-control"required name="Description" value="<?= @$_POST["Description"]?>" >
+                                        <input type="text" class="form-control"required name="Description" value="<?= $sonuc["Description"]?>" >
 
                                     </div>
                                     <br>
                                     <div class="form-group form-check">
                                         <label>
-                                        <input type="checkbox" class="form-check-input" required name="Active">Is Active?</label>
+                                        <input type="checkbox" class="form-check-input <?= $sonuc['Active']==1?'checked':'' ;  ?>" required name="Active">Is Active?</label>
 
                                     </div>
                                     <br>
                                     <div class="form-group">
-                                            <input type="submit" value="Add Product" class="btn btn-primary">
+                                            <input type="submit" value="Update Product" class="btn btn-primary">
                                     </div>
                                 </form>
                             </div>
