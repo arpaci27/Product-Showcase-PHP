@@ -53,7 +53,7 @@ include("../inc/db.php");
      <?php echo $sonuc['message'] ?>
       </div>
       <div class="modal-footer">
-        <a href="delete.php?ID=<?php echo $sonuc['ID'] ?>&table=contactform" class="btn btn-primary">OK</a>
+        <a href="delete.php?ID=<?php echo $sonuc['ID'] ?>&table=contactform" class="btn btn-primary">DELETE</a>
       </div>
     </div>
   </div>

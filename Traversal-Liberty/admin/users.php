@@ -34,8 +34,9 @@ include("../inc/db.php");
                             <th>Email</th>
                             <th>Permission</th>
                             <th>Active</th>
-
-                             
+                            <th>Password<br>Update</th>
+                            <th>Update</th>
+                            
                         </tr>
                     </thead>
 
@@ -55,9 +56,14 @@ include("../inc/db.php");
                                 <td><span class="fa fa-2x fa-<?php echo $sonuc['active'] == "1" ? "check text-succes" : "times"  ?>"></span></td>
                                 <td class="text-center">
 
-                                        <a href="useredit.php?ID=<?= $sonuc["ID"] ?>">
-                                            <span class="fa fa-edit fa-2x"></span></a>
+                                        <a href="userpasswordchange.php?ID=<?= $sonuc["ID"] ?>">
+                                            <span class="fa fa-key fa-2x"></span></a>
                                 </td>
+                                <td class="text-center">
+
+<a href="useredit.php?ID=<?= $sonuc["ID"] ?>">
+    <span class="fa fa-edit fa-2x"></span></a>
+</td>
                                 <td class="text-center">
                                     
                                         <a  href="#"data-toggle="modal" data-target="#deleteModal<?php echo $sonuc["ID"] ?>"><span class="fa fa-trash fa-2x"></span></a>

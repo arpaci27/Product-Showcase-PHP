@@ -97,15 +97,18 @@
                                                 if(isset($_POST["cbRemembers"])){
                                                    setcookie("cookie",(md5($username)), time()+(60*60*24*7));
                                                 }
+
                                                 header("Location: index.php");
                                         }else{
                                             echo "<script> Swal.fire( 'Error!', 'User name or password is wrong!', 'error')
                                             </script>" ;
                                         }
-                                    }}else{
+                                    }else{
                                         echo "<script> Swal.fire( 'Error!', 'Security Code is wrong!', 'error')
                                         </script>" ;
                                     }
+                                }
+                                
                                         ?>
                                     </div>
                                     <div class="card-footer text-center py-3">
