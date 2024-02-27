@@ -1,5 +1,5 @@
 <?php
-$page= "Catalogs";
+$page= "Catalog";
 include("inc/head.php");
 ?>
   <!-- //header -->

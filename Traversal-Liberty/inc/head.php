@@ -39,22 +39,22 @@
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item  <?php if($page=="Home  ") echo "active" ?>">
+              <a class="nav-link " href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item <?php if($page=="Contact") echo "active" ?>">
               <a class="nav-link" href="contact.php">Contact</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item <?php if($page=="About") echo "active" ?>">
               <a class="nav-link" href="about.php">About Us</a>
             </li>
    
-            <li class="nav-item">
+            <li class="nav-item <?php if($page=="Products") echo "active" ?>">
               <a class="nav-link" href="products.php">Products
 
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item <?php if($page=="Catalog") echo "active" ?>"> 
               <a class="nav-link" href="catalogs.php">Catalogs</a>
             
             

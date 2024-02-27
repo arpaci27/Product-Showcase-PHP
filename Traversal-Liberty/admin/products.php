@@ -42,7 +42,6 @@ include("../inc/db.php");
                                     <img src="../assets/images/ÜRÜN GÖRSELLERİ/<?php echo $sonuc["ProductImage"] ?>" width="160" height="180" alt="">
                                 </td>
                                 <td><?php echo $sonuc["Link"] ?></td>
-                                
                                 <td><?php echo $sonuc["Description"] ?></td>
                                 <td><span class="fa fa-2x fa-<?php echo $sonuc['Active'] == "1" ? "check text-succes" : "times"  ?>"></span></td>
                                 <td class="text-center">
