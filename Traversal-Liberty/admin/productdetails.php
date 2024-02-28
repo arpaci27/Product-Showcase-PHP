@@ -78,7 +78,7 @@ while ($sonuc = $sorgu->fetch(PDO::FETCH_ASSOC)) {
         echo '</div>';
         echo '<div class="modal-footer">';
         echo '<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>';
-        echo '<a href="deleteproduct.php?product_id='. $sonuc['product_id'] . '&table=productdetails" class="btn btn-danger">Delete</a>';
+        echo '<a href="deleteproduct.php?product_id='. $sonuc['product_id'] . '&table=productdetails&table2=productdetailsimage" class="btn btn-danger">Delete</a>';
         echo '</div>';
         echo '</div>';
         echo '</div>';

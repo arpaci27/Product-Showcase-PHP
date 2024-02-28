@@ -112,7 +112,7 @@ document.getElementById("plusButton").addEventListener("click", function(event) 
             <br>
             <div class="image-container"></div>
             <button type="button" class="add-image-btn">Add Image</button>
-            <button type="button" class="delete-group-btn">Delete Group</button>
+            <button type="button" class="delete-group-btn">Delete Group</button><br>
         </div>
     `;
 
@@ -142,7 +142,7 @@ function addImageInput(container, groupCounter, imageCounter) {
         <div class="form-group product-image-group">
             <label>Product's Image</label>
             <input type="file" class="form-control product-image-input" required name="ProductImage${groupCounter}_${imageCounter}">
-            <button type="button" class="delete-image-btn">Delete Image</button>
+           <br> <button type="button" class="delete-image-btn">Delete Image</button><br>
         </div>
     `;
 

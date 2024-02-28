@@ -2,20 +2,72 @@
 $page ="Product";
 include('inc/head.php');
 include('inc/db.php');
-$id=$_GET["ID"];
-$sorgu = $baglanti->prepare("SELECT * FROM products WHERE ID=:ID");
-$sorgu->execute(['ID'=>$id]);
-$sonuc = $sorgu->fetch();
+$id = $_GET["ID"];
+$sorgu = $baglanti->prepare("SELECT p.*, pd.*, pdi.* 
+                            FROM products p
+                            JOIN productdetails pd ON p.ProductName = pd.ProductName
+                            JOIN productdetailsimage pdi ON pd.product_id = pdi.product_id
+                            WHERE p.ID = :ID");
+$sorgu->execute(['ID' => $id]);
+
+if ($sorgu) {
+    $sonuc = $sorgu->fetchAll(); // Use fetchAll() to fetch all rows
+    if ($sonuc) {
+        $groupedPhotos = array();
+
+        foreach ($sonuc as $row) {
+            $productName = $row['product_name'];
+            $image = $row['image_name'];
+            
+            if (!isset($groupedPhotos[$productName])) {
+                $groupedPhotos[$productName] = array();
+            }
+            
+            $groupedPhotos[$productName][] = $image;
+        }
+
+        foreach ($groupedPhotos as $productName => $photos) {
+            echo '<section class="w3l-team" id="team">';
+            echo '<div class="team-block py-5">';
+            echo '<div class="container py-lg-5">';
+            echo '<div class="title-content text-center mb-lg-3 mb-4">';
+            echo '<h3 class="hny-title">' . $productName . '</h3>';
+            echo '</div>';
+            echo '<div class="row justify-content-center">';
+            
+            foreach ($photos as $photo) {
+                echo '<div class="col-lg-3 col-6 mt-lg-5 mt-4">';
+                echo '<div class="box16">';
+                echo '<a href="#url"><img src="' . $photo . '" class="img-fluid radius-image" alt=""></a>';
+                echo '<div class="box-content">';
+                // Add more content here if needed
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+            }
+            
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
+            echo '</section>';
+        }
+    } else {
+        echo "No matching records found.";
+    }
+} else {
+    echo "Error executing query: " . $errorInfo[2];
+}
+
 ?>
   <!-- //header -->
   <!-- about breadcrumb -->
   <section class="w3l-about-breadcrumb text-left">
     <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
       <div class="container">
-        <h2 class="title"><?= $sonuc['ProductName'] ?></h2>
+        <h2 class="title">Denım</h2>
         <ul class="breadcrumbs-custom-path mt-2">
           <li><a href="#url">Home</a></li>
-          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span><?= $sonuc['ProductName']?></li>
+          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span>Denım</li>
         </ul>
       </div>
     </div>
@@ -24,7 +76,7 @@ $sonuc = $sorgu->fetch();
   <!--/blog-->
   <div class="py-5 w3l-homeblock1 text-center">
     <div class="container mt-md-3">
-        <h3 class="blog-desc-big text-center mb-4"><?= $sonuc['ProductName'] ?></h3>
+        <h3 class="blog-desc-big text-center mb-4">Denım</h3>
     </div>
 </div>
 <section class="w3l-team" id="team">
@@ -33,34 +85,34 @@ $sonuc = $sorgu->fetch();
         <div class="title-content text-center mb-lg-3 mb-4">
           <h3 class="hny-title">Product Images</h3>
         </div>
-        <div class="row">
-          <div class="col-lg-3 col-6 mt-lg-5 mt-4">
+        <div class="row justify-content-center">
+        <div class="col-lg-3 col-6 mt-lg-5 mt-4">
             <div class="box16">
-              <a href="#url"><img src="assets/images/ÜRÜN GÖRSELLERİ/<?= $sonuc['ProductImage'] ?>" class="img-fluid radius-image" alt=""></a>
+              <a href="#url"><img src="assets/images/ÜRÜN GÖRSELLERİ/product 1.1.jpeg" class="img-fluid radius-image" alt=""></a>
               <div class="box-content">
-                <h3 class="title"><a href="#url"><?= $sonuc['ProductName'] ?></a></h3>
+                <h3 class="title"><a href="#url">Denım</a></h3>
+               
+              </div>
+            </div>
+          </div><div class="col-lg-3 col-6 mt-lg-5 mt-4">
+            <div class="box16">
+              <a href="#url"><img src="assets/images/ÜRÜN GÖRSELLERİ/product 1.1.jpeg" class="img-fluid radius-image" alt=""></a>
+              <div class="box-content">
+                <h3 class="title"><a href="#url">Denım</a></h3>
                
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-6 mt-lg-5 mt-4">
             <div class="box16">
-              <a href="#url"><img src="assets/images/ÜRÜN GÖRSELLERİ/<?= $sonuc['ProductImage'] ?>" class="img-fluid radius-image" alt=""></a>
+              <a href="#url"><img src="assets/images/ÜRÜN GÖRSELLERİ/product 1.1.jpeg" class="img-fluid radius-image" alt=""></a>
               <div class="box-content">
-                <h3 class="title"><a href="#url"><?= $sonuc['ProductName'] ?></a></h3>
+                <h3 class="title"><a href="#url">Denım</a></h3>
                
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-6 mt-lg-5 mt-4">
-            <div class="box16">
-              <a href="#url"><img src="assets/images/ÜRÜN GÖRSELLERİ/<?= $sonuc['ProductImage'] ?>" class="img-fluid radius-image" alt=""></a>
-              <div class="box-content">
-                <h3 class="title"><a href="#url"><?= $sonuc['ProductName'] ?></a></h3>
-               
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>
