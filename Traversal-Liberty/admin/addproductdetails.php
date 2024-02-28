@@ -3,14 +3,16 @@ $sayfa = "Products";
 include("inc/ahead.php");
 include("../inc/db.php");
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $selectedProduct = $_POST['selectedProduct'];
+    
     try {
         // Assuming $baglanti is your PDO connection to the database
         $baglanti->beginTransaction();
 
         // Insert the product name into the productdetails table
         $productName = $_POST['ProductName1']; // You might need to adjust this based on your form structure
-        $stmt = $baglanti->prepare("INSERT INTO productdetails (product_name) VALUES (:productName)");
-        $stmt->execute([':productName' => $productName]);
+        $stmt = $baglanti->prepare("INSERT INTO productdetails (product_name, ProductName) VALUES (:productName, :ProductName)");
+        $stmt->execute([':productName' => $productName,':ProductName' => $selectedProduct]);
         $productId = $baglanti->lastInsertId(); // Get the ID of the inserted product
 
         // Loop through uploaded files and insert into productdetailsimage table
@@ -57,7 +59,7 @@ function saveUploadedFile($file) {
 ?>
 <main>
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Add Category</h1>
+        <h1 class="mt-4">Add Product</h1>
         <ol class="breadcrumb mb-4">
             <li class="breadcrumb-item active">Dashboard - <?= $sayfa ?></li>
         </ol>
@@ -76,26 +78,19 @@ function saveUploadedFile($file) {
                         <div class="form-group">
                             <br>
 
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Choose A Category</option>
-                                <?php
-                                $sorgu = $baglanti->prepare("SELECT * FROM products");
-                                $sorgu->execute();
-                                while ($sonuc = $sorgu->fetch()) {
-                                ?>
-
-                                    <option value="<?= $sonuc['ProductName'] ?>"><?= $sonuc['ProductName'] ?></option><?php } ?>
-                            </select>
+                            <select class="form-select" required name="selectedProduct" aria-label="Default select example">
+        <option selected>Choose A Category</option>
+        <?php
+        $sorgu = $baglanti->prepare("SELECT * FROM products");
+        $sorgu->execute();
+        while ($sonuc = $sorgu->fetch()) {
+        ?>
+            <option value="<?= $sonuc['ProductName'] ?>"><?= $sonuc['ProductName'] ?></option>
+        <?php } ?>
+    </select>
 
                         </div>
-                        <div class="form-group">
-                                    <br>
-
-                                        <label>Title of Product</label>
-                                        <input type="text" class="form-control" required name="ProductName" >
-
-                                    </div>
-                        <br>
+                       <br>
                         <button id="plusButton" class="btn btn-primary"><i class="fa fa-plus"></i></button>
 <div id="elementsContainer"></div>
 

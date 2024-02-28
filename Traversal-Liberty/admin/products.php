@@ -1,5 +1,5 @@
 <?php
-$sayfa = "Products";
+$sayfa = "Categories";
 include("inc/ahead.php");
 include("../inc/db.php");
 
@@ -13,15 +13,15 @@ include("../inc/db.php");
 
         <div class="card mb-4">
             <div class="card-header">
-               <a href="addproducts.php" class="btn btn-primary">Add Product</a>
+               <a href="addproducts.php" class="btn btn-primary">Add Category</a>
             </div>
             <div class="card-body">
                 <table id="dataTable" class="table table-bordered text-left text-center">
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Product Name</th>
-                            <th>Product Image</th>
+                            <th>Category Name</th>
+                            <th>Category Image</th>
                             <th>Link</th>
 
                               <th>Description</th>
