@@ -16,7 +16,7 @@ include("../inc/db.php");
                <a href="addproductdetails.php" class="btn btn-primary">Add Product</a>
             </div>
             <div class="card-body">
-                <table id="dataTable" class="table table-bordered text-left text-center">
+                <table id="dataTable" class="table table-bordered table-striped text-left text-center">
                     <thead>
                         <tr>
                             <th>No</th>

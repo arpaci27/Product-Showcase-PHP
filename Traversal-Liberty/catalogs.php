@@ -2,6 +2,24 @@
 $page= "Catalog";
 include("inc/head.php");
 ?>
+<style>
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.price-box {
+    opacity: 0; /* Initially hidden */
+    animation: fadeInUp 1s ease forwards;
+}
+</style>
+
   <!-- //header -->
   <!-- about breadcrumb -->
   <section class="w3l-about-breadcrumb text-left">
@@ -16,137 +34,33 @@ include("inc/head.php");
     </div>
   </section>
   <!-- //about breadcrumb -->
-  <!--/pricing-->
+  
   <section class="w3l-pricinghny">
     <div class="pricing-inner-info py-5">
       <div class="container py-lg-4">
         <!--/pricing-info-grids-->
         <div class="pricing-info-grids">
           <!--/box-->
-          <div class="price-box">
-            <div class="grid grid-column-2">
-              <div class="column pr-img-gd">
-                <h6 class="pricehead"><span class="fa fa-delicious mr-2" aria-hidden="true"></span> Maldives
-                </h6>
-              </div>
-              <div class="column text-lg-center">
-                <p class="price-title">03 Days / 02 Nights</p>
-              </div>
-              <div class="column price-number text-md-right">
-                <h3 class="pricing"> <sup class="pri1">$</sup>25<sup class="pri">99</sup>
-                </h3>
-                <button class="btn btn-style btn-primary ml-lg-3">Book Now</button>
-              </div>
-            </div>
-          </div>
-          <!--/box-->
-          <!--/box-->
-          <div class="price-box">
-            <div class="grid grid-column-2">
-              <div class="column pr-img-gd">
-                <h6 class="pricehead"><span class="fa fa-delicious mr-2" aria-hidden="true"></span> London,England
-                </h6>
-              </div>
-              <div class="column text-lg-center">
-                <p class="price-title">03 Days / 02 Nights</p>
-              </div>
-              <div class="column price-number text-md-right">
-                <h3 class="pricing"> <sup class="pri1">$</sup>35<sup class="pri">99</sup>
-                </h3>
-                <button class="btn btn-style btn-primary ml-lg-3">Download</button>
-              </div>
-            </div>
-          </div>
-          <!--/box-->
-          <!--/box-->
-          <div class="price-box">
-            <div class="grid grid-column-2">
-              <div class="column pr-img-gd">
-                 <h6 class="pricehead"><span class="fa fa-delicious mr-2" aria-hidden="true"></span> Turkey,Greneda
-                </h6>
-              </div>
-              <div class="column text-lg-center">
-                <p class="price-title">07 Days/ 06 Nights</p>
-              </div>
-              <div class="column price-number text-md-right">
-                <h3 class="pricing"> <sup class="pri1">$</sup>49<sup class="pri">99</sup>
-                </h3>
-                <button class="btn btn-style btn-primary ml-lg-3">Book Now</button>
-              </div>
-            </div>
-          </div>
-          <!--/box-->
-          <!--/box-->
-          <div class="price-box">
-            <div class="grid grid-column-2">
-              <div class="column pr-img-gd">
-              <h6 class="pricehead"><span class="fa fa-delicious mr-2" aria-hidden="true"></span> Paris,Madrid
-                </h6>
-              </div>
-              <div class="column text-lg-center">
-                <p class="price-title">03 Days / 02 Nights</p>
-              </div>
-              <div class="column price-number text-md-right">
-                <h3 class="pricing"> <sup class="pri1">$</sup>55<sup class="pri">99</sup>
-                </h3>
-                <button class="btn btn-style btn-primary ml-lg-3">Book Now</button>
-              </div>
-            </div>
-          </div>
-          <!--/box-->
-          <!--/box-->
-          <div class="price-box">
-            <div class="grid grid-column-2">
-              <div class="column pr-img-gd">
-               <h6 class="pricehead"><span class="fa fa-delicious mr-2" aria-hidden="true"></span> Bali,Indonesia
-                </h6>
-              </div>
-              <div class="column text-lg-center">
-                <p class="price-title">08 Days / 07 Nights</p>
-              </div>
-              <div class="column price-number text-md-right">
-                <h3 class="pricing"> <sup class="pri1">$</sup>69<sup class="pri">99</sup>
-                </h3>
-                <button class="btn btn-style btn-primary ml-lg-3">Book Now</button>
-              </div>
-            </div>
-          </div>
+          <div class="price-box py-5 visible">
+    <h1>Yarn Catalogue</h1>
+    <br>
+    <embed src="assets/pdf/Yarn-Catalogue-Easlytrade-.pdf" width="100%" height="600px" type="application/pdf">
+</div>
+<div class="price-box py-5 visible">
+    <h1>Yarn Catalogue</h1>
+    <br>
+    <embed src="assets/pdf/Knitwear-Fashion-Catalog-1-3.pdf" width="100%" height="600px" type="application/pdf">
+</div><div class="price-box py-5 visible">
+    <h1>Yarn Catalogue</h1>
+    <br>
+    <embed src="assets/pdf/Yarn-Collection-2.pdf" width="100%" height="600px" type="application/pdf">
+</div>
           <!--/box-->
      <!--/box-->
-     <div class="price-box">
-      <div class="grid grid-column-2">
-        <div class="column pr-img-gd">
-           <h6 class="pricehead"><span class="fa fa-delicious mr-2" aria-hidden="true"></span> Switzerland
-          </h6>
-        </div>
-        <div class="column text-lg-center">
-          <p class="price-title">07 Days/ 06 Nights</p>
-        </div>
-        <div class="column price-number text-md-right">
-          <h3 class="pricing"> <sup class="pri1">$</sup>49<sup class="pri">99</sup>
-          </h3>
-          <button class="btn btn-style btn-primary ml-lg-3">Book Now</button>
-        </div>
-      </div>
-    </div>
+     
     <!--/box-->
     <!--/box-->
-    <div class="price-box">
-      <div class="grid grid-column-2">
-        <div class="column pr-img-gd">
-        <h6 class="pricehead"><span class="fa fa-delicious mr-2" aria-hidden="true"></span> Italy
-          </h6>
-        </div>
-        <div class="column text-lg-center">
-          <p class="price-title">03 Days / 02 Nights</p>
-        </div>
-        <div class="column price-number text-md-right">
-          <h3 class="pricing"> <sup class="pri1">$</sup>55<sup class="pri">99</sup>
-          </h3>
-          <button class="btn btn-style btn-primary ml-lg-3">Book Now</button>
-        </div>
-      </div>
-    </div>
+    
     <!--/box-->
         </div>
         <!--/pricing-info-grids-->
@@ -163,7 +77,28 @@ include('inc/footer.php');
       <?php
 include('inc/scripts.php');
 ?>
- 
+ <script>$(document).ready(function() {
+    function isInViewport(element) {
+        var rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function animateIfVisible() {
+        $('.price-box').each(function() {
+            if (isInViewport(this)) {
+                $(this).addClass('visible');
+            }
+        });
+    }
+
+    $(window).scroll(animateIfVisible);
+    animateIfVisible();
+});</script>
       
 </body>
 

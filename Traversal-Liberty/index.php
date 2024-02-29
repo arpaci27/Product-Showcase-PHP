@@ -32,8 +32,76 @@ $sonuc = $sorgu->fetch();
     </div>
   </section>
   <!-- /main-slider -->
-  <!-- //banner-slider-->
+  <!-- //banner-slider--><script>$(document).ready(function() {
+    function isInViewport(element) {
+        var rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
 
+    function animateIfVisible() {
+        $('.subject-card').each(function() {
+            if (isInViewport(this)) {
+                $(this).addClass('visible');
+            }
+        });
+    }
+
+    $(window).scroll(animateIfVisible);
+    animateIfVisible();
+});$(document).ready(function() {
+    function isInViewport(element) {
+        var rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function animateIfVisible() {
+        $('.best-rooms').each(function() {
+            if (isInViewport(this)) {
+                $(this).addClass('visible');
+            }
+        });
+    }
+
+    $(window).scroll(animateIfVisible);
+    animateIfVisible();
+});</script>
+<style>@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.best-rooms {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+
+.best-rooms.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.subject-card:hover {
+    transform: scale(1.05);
+}
+.subject-card {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}</style>
   <!--/grids-->
   <section class="w3l-grids-3 py-5">
     <div class="container py-md-5">
@@ -50,26 +118,24 @@ $sonuc = $sorgu->fetch();
   while($row = $all_products->fetch()){
 
   ?>
-        <div class="col-lg-6 subject-card mt-lg-0 mt-4">
-          <div class="subject-card-header p-4">
-            <a href="#" class="card_title p-lg-4d-block">
-              <div class="row align-items-center">
+
+<div class="col-lg-6 subject-card mt-lg-0 mt-4 visible">
+    <div class="subject-card-header p-4">
+        <a href="#" class="card_title p-lg-4d-block">
+            <div class="row align-items-center">
                 <div class="col-sm-5 subject-img">
-                  <img src="assets/images/ÜRÜN GÖRSELLERİ/<?php echo $row["ProductImage"] ?>" class="img-fluid" alt="">
+                    <img class="img-thumbnail" src="assets/images/ÜRÜN GÖRSELLERİ/<?php echo $row["ProductImage"] ?>" class="img-fluid" alt="">
                 </div>
                 <div class="col-sm-7 subject-content mt-sm-0 mt-4">
-                  <h4><?php echo $row["ProductName"] ?></h4>
-                  <p>See Details</p>
-                  <div class="dst-btm">
-                    <h6 class=""> Start From </h6>
-                    <span>$1650</span>
-                  </div>
-                  <p class="sub-para">Per person on twin sharing</p>
+                    <h4><?php echo $row["ProductName"] ?></h4>
+                    <p>See Details</p>
+                    <div class="dst-btm">
+                    </div>
                 </div>
-              </div>
-            </a>
-          </div>
-        </div><br>
+            </div>
+        </a>
+    </div><br>
+</div><br>
         <?php } ?>
           <!--//row-grids-->
       </div>
@@ -80,17 +146,16 @@ $sonuc = $sorgu->fetch();
 
   <!-- //stats -->
   <!--/-->
-  <div class="best-rooms py-5">
+  <div class="best-rooms py-5 visible">
     <div class="container py-md-5">
         <div class="ban-content-inf row">
             <div class="maghny-gd-1 col-lg-6">
               <div class="maghny-grid">
                 <figure class="effect-lily border-radius  m-0">
-                    <img class="img-fluid" src="assets/images/g10.jpg" alt="" />
+                    <img class="img-fluid" class="img-thumbnail" src="assets/images/ÜRÜN GÖRSELLERİ/Product 12.1.jpeg" alt="" />
                     <figcaption>
                         <div>
-                            <h4>3Days, 4 Nights</h4>
-                            <p>From 1720$ </p>
+                            <h4>Sleepwear</h4>
                         </div>
 
                     </figcaption>
@@ -102,11 +167,10 @@ $sonuc = $sorgu->fetch();
                     <div class="maghny-gd-1 col-6">
                         <div class="maghny-grid">
                             <figure class="effect-lily border-radius">
-                                <img class="img-fluid" src="assets/images/g9.jpg" alt="" />
+                                <img class="img-fluid" src="assets/images/ÜRÜN GÖRSELLERİ/Product 11.1.jpeg" alt="" />
                                 <figcaption>
                                     <div>
-                                        <h4>3Days, 4 Nights</h4>
-                                        <p>From 1220$ </p>
+                                        <h4>Stone Top</h4>
                                     </div>
 
                                 </figcaption>
@@ -116,10 +180,10 @@ $sonuc = $sorgu->fetch();
                     <div class="maghny-gd-1 col-6">
                         <div class="maghny-grid">
                             <figure class="effect-lily border-radius">
-                                <img class="img-fluid" src="assets/images/g8.jpg" alt="" />
+                                <img class="img-fluid" src="assets/images/ÜRÜN GÖRSELLERİ/product 2.1.jpeg" alt="" />
                                 <figcaption>
                                     <div>
-                                        <h4>3Days, 4 Nights</h4>
+                                        <h4>Denim</h4>
                                         <p>From 1620$ </p>
                                     </div>
 
@@ -130,11 +194,10 @@ $sonuc = $sorgu->fetch();
                     <div class="maghny-gd-1 col-6 mt-4">
                         <div class="maghny-grid">
                             <figure class="effect-lily border-radius">
-                                <img class="img-fluid" src="assets/images/g7.jpg" alt="" />
+                                <img class="img-fluid" src="assets/images/ÜRÜN GÖRSELLERİ/Product 13.1.jpeg" alt="" />
                                 <figcaption>
                                     <div>
-                                        <h4>3Days, 4 Nights</h4>
-                                        <p>From 1820$ </p>
+                                        <h4>Jacket</h4>
                                     </div>
 
                                 </figcaption>
@@ -144,11 +207,10 @@ $sonuc = $sorgu->fetch();
                     <div class="maghny-gd-1 col-6 mt-4">
                         <div class="maghny-grid">
                             <figure class="effect-lily border-radius">
-                                <img class="img-fluid" src="assets/images/g6.jpg" alt="" />
+                                <img class="img-fluid" src="assets/images/ÜRÜN GÖRSELLERİ/Product 14.1.jpeg" alt="" />
                                 <figcaption>
                                     <div>
-                                        <h4>3Days, 4 Nights</h4>
-                                        <p>From 1520$ </p>
+                                        <h4>Shirt</h4>
                                     </div>
 
                                 </figcaption>
@@ -169,10 +231,10 @@ $sonuc = $sorgu->fetch();
           <div class="bottom-info ml-auto">
             <div class="header-section text-left">
               <h3 class="hny-title two"><?php 
-              echo $sonuc["secondTitle"];
+              echo $sonuc["firstTitle"];
               ?></h3>
               <p class="mt-3 pr-lg-5"><?php 
-              echo $sonuc["littleDescription"];
+              echo $sonuc["firstLittleTitle"];
               ?></p>
               <a href="about.php" class="btn btn-style btn-secondary mt-5">Read More</a>
             </div>

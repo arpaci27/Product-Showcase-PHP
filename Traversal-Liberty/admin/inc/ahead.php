@@ -113,6 +113,11 @@ include("../inc/db.php");
                                     <a class="nav-link" href="users.php">Users</a>
                                 </nav> <?php } ?>
                             </div>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="catalogs.php">Catalogs</a>
+                                </nav>
+                            </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
                         <?php echo $_SESSION['username'] ?>

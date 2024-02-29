@@ -18,6 +18,7 @@
 </head>
 
 <body>
+
   <!--header-->
   <header id="site-header" class="fixed-top">
     <div class="container">
@@ -50,7 +51,7 @@
             </li>
    
             <li class="nav-item <?php if($page=="Products") echo "active" ?>">
-              <a class="nav-link" href="products.php">Products
+              <a class="nav-link" href="products.php">Categories
 
               </a>
             </li>

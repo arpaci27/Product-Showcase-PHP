@@ -7,6 +7,46 @@ $sorgu = $baglanti->prepare("SELECT * FROM aboutus");
 $sorgu->execute();
 $sonuc = $sorgu->fetch();
 ?>
+
+<style>@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.grids5-info {
+    opacity: 0; /* Initially hidden */
+    animation: fadeInUp 1s ease forwards;
+}
+</style>
+<script>$(document).ready(function() {
+    function isInViewport(element) {
+        var rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function animateIfVisible() {
+        $('.grids5-info').each(function() {
+            if (isInViewport(this)) {
+                $(this).addClass('visible');
+            }
+        });
+    }
+
+    $(window).scroll(animateIfVisible);
+    animateIfVisible();
+});
+</script>
   <!-- //header -->
   <!-- about breadcrumb -->
   <section class="w3l-about-breadcrumb text-left">
@@ -46,14 +86,19 @@ $sonuc = $sorgu->fetch();
       <div class="row">
         <div class="col-lg-6 content-6-left pr-lg-5">
           <h6 class="sub-title">Why Choose Us</h6>
-          <h3 class="hny-title"><?php 
-              echo $sonuc["SecondTitle"];
-              ?></h3>
+          <h3 class="hny-title">innovative, entrepreneurial and pioneer</h3>
         </div>
         <div class="col-lg-6 content-6-right mt-lg-0 mt-4">
-          <p class="mb-3"><?php 
-              echo $sonuc["SecondText"];
-              ?></p>
+          <p class="mb-4"> - We are innovative, entrepreneurial and pioneer <br>
+- We can do Sample-based customization <br>
+- We use Testing instruments for Quality traceability <br>
+- Our priority is to keep quality and service at the highest level <br>
+- We have a competitive price policy <br>
+- We produce using environmentally friendly and sustainable technologies <br>
+- We follow up customer demands and sector trends closely. <br>
+- We work to make each day of our customers better than the last <br>
+- We are dreaming and turning these dreams into reality... <br></p>
+
               <a href="products.php" class="btn btn-style btn-primary mt-4">See the products</a>
         </div>
       </div>
@@ -69,12 +114,10 @@ $sonuc = $sorgu->fetch();
   $sql = "SELECT * FROM products LIMIT 3";
   $all_products = $baglanti->query($sql);
   while($row = $all_products->fetch()){?>
-        <div class="col-md-4 col-sm-6 mt-0 grids5-info">
-          <a href="#url"><img src="assets/images/ÜRÜN GÖRSELLERİ/<?= $row["ProductImage"] ?>" class="img-fluid" alt=""></a>
-          <h5>Lorem</h5>
-          <h4><a href="#url"> <?php echo $row["ProductName"] ?></a></h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam esse? dolores impedit doloremque.</p>
-        </div>
+        <div class="col-md-4 col-sm-6 mt-0 grids5-info visible">
+    <a href="#url"><img src="assets/images/ÜRÜN GÖRSELLERİ/<?= $row["ProductImage"] ?>" class="img-fluid" alt=""></a>
+    <h4><a href="#url"> <?php echo $row["ProductName"] ?></a></h4>
+</div>
        <?php
        } ?> 
       </div>
@@ -92,7 +135,7 @@ $sonuc = $sorgu->fetch();
     </div>
   </section>
   <!-- //stats -->
-  <!-- team -->
+  <!-- team 
   <section class="w3l-team" id="team">
     <div class="team-block py-5">
       <div class="container py-lg-5">
@@ -103,10 +146,10 @@ $sonuc = $sorgu->fetch();
         <div class="row">
           <div class="col-lg-3 col-6 mt-lg-5 mt-4">
             <div class="box16">
-              <a href="#url"><img src="assets/images/team1.jpg" alt="" class="img-fluid" /></a>
+              <a href="#url"><img src="assets/images/ÜRÜN GÖRSELLERİ/Product 1.1.jpeg" alt="" class="img-fluid" /></a>
               <div class="box-content">
-                <h3 class="title"><a href="#url">Alexander</a></h3>
-                <span class="post">Description</span>
+                <h3 class="title"><a href="#url">DENIM</a></h3>
+                <span class="post">See Details</span>
                 <ul class="social">
                   <li>
                     <a href="#" class="facebook">
@@ -122,74 +165,11 @@ $sonuc = $sorgu->fetch();
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-6 mt-lg-5 mt-4">
-            <div class="box16">
-              <a href="#url"><img src="assets/images/team2.jpg" alt="" class="img-fluid" /></a>
-              <div class="box-content">
-                <h3 class="title"><a href="#url">Victoria</a></h3>
-                <span class="post">Description</span>
-                <ul class="social">
-                  <li>
-                    <a href="#" class="facebook">
-                      <span class="fa fa-facebook-f"></span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="twitter">
-                      <span class="fa fa-twitter"></span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6 mt-lg-5 mt-4">
-            <div class="box16">
-              <a href="#url"><img src="assets/images/team3.jpg" alt="" class="img-fluid" /></a>
-              <div class="box-content">
-                <h3 class="title"><a href="#url">Smith roy</a></h3>
-                <span class="post">Description</a></span>
-                <ul class="social">
-                  <li>
-                    <a href="#" class="facebook">
-                      <span class="fa fa-facebook-f"></span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="twitter">
-                      <span class="fa fa-twitter"></span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6 mt-lg-5 mt-4">
-            <div class="box16">
-              <a href="#url"><img src="assets/images/team4.jpg" alt="" class="img-fluid" /></a>
-              <div class="box-content">
-                <h3 class="title"><a href="#url">Johnson</a></h3>
-                <span class="post">Description</a></span>
-                <ul class="social">
-                  <li>
-                    <a href="#" class="facebook">
-                      <span class="fa fa-facebook-f"></span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="twitter">
-                      <span class="fa fa-twitter"></span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>
-  </section>
-  <!-- //team -->
+  </section>-->
   <!-- //team -->
 
   <!--/w3l-footer-29-main-->

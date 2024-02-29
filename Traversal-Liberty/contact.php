@@ -5,6 +5,10 @@ $tanimlama = "contactpage";
 $key = "contact";
 include('inc/head.php');
 session_start();
+
+$sorgu = $baglanti->prepare("SELECT * FROM contact");
+$sorgu->execute();
+$sonuc2 = $sorgu->fetch();
  ?>
   <!-- //header -->
   <!-- about breadcrumb -->
@@ -29,17 +33,17 @@ session_start();
           <div class="partners">
             <div class="cont-details">
               <h5>Get in touch</h5>
-              <p class="mt-3 mb-4">Hi there, We are available 24/7 by fax, e-mail or by phone. Drop us line so we can talk
-                futher about that.</p>
+           
             </div>
             <div class="hours">
               <h6 class="mt-4">Email:</h6>
-              <p> <a href="mailto:mail@traversal.com">
-                mail@traversal.com</a></p>
+              <p> <a href="mailto:<?= $sonuc2['email'] ?>">
+               <?= $sonuc2['email'] ?></a></p>
               <h6 class="mt-4">Visit Us:</h6>
-              <p> 78-80 Upper St Giles St. Norwich NR2 1LT United Kingdom.</p>
+              <p> <?= $sonuc2['adress1'] ?></p><h6 class="mt-4">Visit Us:</h6>
+              <p> <?= $sonuc2['adress2'] ?></p>
               <h6 class="mt-4">Contact:</h6>
-              <p class="margin-top"><a href="tel:+44-255-366-88">+44-255-366-88</a></p>
+              <p class="margin-top"><a href="tel:<?= $sonuc2['phone'] ?>"><?= $sonuc2['phone'] ?></a></p>
             </div>
           </div>
         </div>
@@ -79,7 +83,8 @@ session_start();
             ]);
 
             if($ekle){
-
+              echo "<script> Swal.fire( 'Success!', 'Your message has been sent successfully!', 'success')
+                </script>" ;
 
               function mailgonder(){
                 require "inc/class.phpmailer.php"; // PHPMailer dosyamızı çağırıyoruz  
@@ -116,8 +121,7 @@ session_start();
 
 
 
-              echo "<script> Swal.fire( 'Success!', 'Your message has been sent successfully!', 'success')
-                </script>" ;
+              
           } 
           
           }else{
@@ -133,9 +137,7 @@ session_start();
       </div>
       <div class="map mt-5 pt-md-5">
         <h5>Map</h5>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387145.86654334463!2d-74.25818682528057!3d40.70531100753592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1493028309728"
-          style="border:0" allowfullscreen=""></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.513458416145!2d28.796636076531506!3d41.07962671502776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa58830b0fa25%3A0xdc55111a8a343ad2!2sZiya%20G%C3%B6kalp%2C%20Esenler%20Oto%20Sanayi%20Sitesi%20No%3A20%2C%2034490%20%C4%B0kitelli%20Osb%2FBa%C5%9Fak%C5%9Fehir%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1709168967098!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
 </section>
