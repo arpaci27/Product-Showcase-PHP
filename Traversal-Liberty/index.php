@@ -19,10 +19,10 @@ $sonuc = $sorgu->fetch();
           <div class="container">
             <div class="banner-infhny">
               <h3><?php 
-              echo $sonuc["firstTitle"];
+              echo $language['SliderTitle'];
               ?></h3>
               <h6 class="mb-3"><?php 
-              echo $sonuc["firstLittleTitle"];
+              echo $language["SecondTitle"];
               ?></h6>
               
             </div>
@@ -106,8 +106,8 @@ $sonuc = $sorgu->fetch();
   <section class="w3l-grids-3 py-5">
     <div class="container py-md-5">
       <div class="title-content text-left mb-lg-5 mb-4">
-        <h6 class="sub-title">Explore</h6>
-        <h3 class="hny-title">Popular Products</h3>
+        <h6 class="sub-title"><?php echo $language['Explore'] ?></h6>
+        <h3 class="hny-title"><?php echo $language['PopularProducts'] ?></h3>
       </div>
       <div class="row bottom-ab-grids">
   <!--/row-grids-->
@@ -128,7 +128,7 @@ $sonuc = $sorgu->fetch();
                 </div>
                 <div class="col-sm-7 subject-content mt-sm-0 mt-4">
                     <h4><?php echo $row["ProductName"] ?></h4>
-                    <p>See Details</p>
+                    <p><?php echo $language['See Details'] ?></p>
                    
                 </div>
             </div>
@@ -229,12 +229,14 @@ $sonuc = $sorgu->fetch();
           <div class="bottom-info ml-auto">
             <div class="header-section text-left">
               <h3 class="hny-title two"><?php 
-              echo $sonuc["firstTitle"];
+              echo $language["SliderTitle"];
               ?></h3>
               <p class="mt-3 pr-lg-5"><?php 
-              echo $sonuc["firstLittleTitle"];
+              echo $language["SecondTitle"];
               ?></p>
-              <a href="about.php" class="btn btn-style btn-secondary mt-5">Read More</a>
+              <a href="about.php" class="btn btn-style btn-secondary mt-5"><?php 
+              echo $language["GetInTouch"];
+              ?></a>
             </div>
            
 

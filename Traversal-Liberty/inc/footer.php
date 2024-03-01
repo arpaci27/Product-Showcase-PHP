@@ -34,21 +34,21 @@
             <div class="col-lg-6 column">
               <div class="row">
                 <div class="col-md-4 column">
-                  <h3>Company</h3>
+                  <h3>EaslyTrade</h3>
                   <ul class="footer-gd-16">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Products</a></li>
-                    <li><a href="blog.html">Catalogs</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="index.php"><?php echo $language['Home'] ?></a></li>
+                    <li><a href="about.php"><?php echo $language['About'] ?></a></li>
+                    <li><a href="products.php"><?php echo $language['Categories'] ?></a></li>
+                    <li><a href="catalogs.php"><?php echo $language['Catalog'] ?></a></li>
+                    <li><a href="contact.php"><?php echo $language['Contact'] ?></a></li>
                   </ul>
                 </div>
                 <div class="col-md-4 column mt-md-0 mt-4">
-                  <h3>Useful Links</h3>
+                  <h3><?php echo $language['UsefulLinks'] ?></h3>
                   <ul class="footer-gd-16">
-                    <li><a href="products.php">Popular Products</a></li>
-                    <li><a href="about.php">About Company</a></li>
-                    <li><a href="pricing.php">Our Catalogs</a></li>
+                    <li><a href="products.php"><?php echo $language['PopularProducts'] ?></a></li>
+                    <li><a href="about.php"><?php echo $language['About'] ?></a></li>
+                    <li><a href="pricing.php"><?php echo $language['Catalog'] ?></a></li>
                   </ul>
                 </div>
                
@@ -58,7 +58,7 @@
           </div>
           <div class="d-flex below-section justify-content-between align-items-center pt-4 mt-5">
             <div class="columns text-lg-left text-center">
-              <p>&copy; Telif Hakkı © 2024 Easly Trade Aş. Tüm Hakları Saklıdır. - Powered by Yusuf Altun™️
+              <p>&copy; <?php echo $language['CopyRight'] ?> </p>
               </p>
             </div>
             <div class="columns-2 mt-lg-0 mt-3">

@@ -25,10 +25,10 @@ include("inc/head.php");
   <section class="w3l-about-breadcrumb text-left">
     <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
       <div class="container">
-        <h2 class="title">Catalogs</h2>
+        <h2 class="title"><?php echo $language['Catalog'] ?></h2>
         <ul class="breadcrumbs-custom-path mt-2">
-          <li><a href="#url">Home</a></li>
-          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Catalogs </li>
+          <li><a href="#url"><?php echo $language['Home'] ?></a></li>
+          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span><?php echo $language['Catalog'] ?></li>
         </ul>
       </div>
     </div>
@@ -42,16 +42,16 @@ include("inc/head.php");
         <div class="pricing-info-grids">
           <!--/box-->
           <div class="price-box py-5 visible">
-    <h1>Yarn Catalogue</h1>
+    <h1>Yarn <?php echo $language['Catalog'] ?></h1>
     <br>
     <embed src="assets/pdf/Yarn-Catalogue-Easlytrade-.pdf" width="100%" height="600px" type="application/pdf">
 </div>
 <div class="price-box py-5 visible">
-    <h1>Yarn Catalogue</h1>
+    <h1>Knitwear-Fashion <?php echo $language['Catalog'] ?></h1>
     <br>
     <embed src="assets/pdf/Knitwear-Fashion-Catalog-1-3.pdf" width="100%" height="600px" type="application/pdf">
 </div><div class="price-box py-5 visible">
-    <h1>Yarn Catalogue</h1>
+    <h1>Yarn-Collection <?php echo $language['Catalog'] ?></h1>
     <br>
     <embed src="assets/pdf/Yarn-Collection-2.pdf" width="100%" height="600px" type="application/pdf">
 </div>

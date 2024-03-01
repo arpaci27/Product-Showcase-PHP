@@ -1,3 +1,13 @@
+<?php 
+session_start();
+if(!isset($_SESSION['language'])){
+  require('language/en.php');
+}else{
+  require('language/'.$_SESSION['language'].'.php');
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -41,29 +51,37 @@
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item  <?php if($page=="Home  ") echo "active" ?>">
-              <a class="nav-link " href="index.php">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item  <?php if($page=="Home") echo "active" ?>">
+              <a class="nav-link " href="index.php"><?php echo $language['Home']?> <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item <?php if($page=="Contact") echo "active" ?>">
-              <a class="nav-link" href="contact.php">Contact</a>
+              <a class="nav-link" href="contact.php"><?php echo $language['Contact']?></a>
             </li>
             <li class="nav-item <?php if($page=="About") echo "active" ?>">
-              <a class="nav-link" href="about.php">About Us</a>
+              <a class="nav-link" href="about.php"><?php echo $language['About']?></a>
             </li>
    
             <li class="nav-item <?php if($page=="Products") echo "active" ?>">
-              <a class="nav-link" href="products.php">Categories
+              <a class="nav-link" href="products.php"><?php echo $language['Categories']?>
 
               </a>
             </li>
             <li class="nav-item <?php if($page=="Catalog") echo "active" ?>"> 
-              <a class="nav-link" href="catalogs.php">Catalogs</a>
-            
-            
+              <a class="nav-link" href="catalogs.php"><?php echo $language['Catalog']?></a>
+            </li>
+            <li class="nav-item <?php if($language=="tr") echo "active" ?>"> 
+              <a class="nav-link" href="language.php?language=tr">TR</a>
+            </li>
+            <li class="nav-item <?php if($language=="en") echo "active" ?>"> 
+              <a class="nav-link" href="language.php?language=en">EN</a>
+            </li>
+            <li class="nav-item <?php if($language=="de") echo "active" ?>"> 
+              <a class="nav-link" href="language.php?language=de">DE</a>
+            </li>
           </ul>
         </div>
         <div class="d-lg-block d-none">
-          <a href="contact.php" class="btn btn-style btn-secondary">Get In Touch</a>
+          <a href="contact.php" class="btn btn-style btn-secondary"><?php echo $language['GetInTouch'] ?></a>
         </div>
         <!-- toggle switch for light and dark theme -->
         <div class="mobile-position">

@@ -12,8 +12,8 @@ $sorgu = $baglanti->prepare("SELECT * FROM products");
       <div class="container">
         <h2 class="title">Categories </h2>
         <ul class="breadcrumbs-custom-path mt-2">
-          <li><a href="#url">Home</a></li>
-          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Categories </li>
+          <li><a href="#url"><?php echo $language['Home'] ?></a></li>
+          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> <?php echo $language['Categories'] ?> </li>
         </ul>
       </div>
     </div>
@@ -49,7 +49,7 @@ $sorgu = $baglanti->prepare("SELECT * FROM products");
  <section class="grids-1 py-5">
   <div class="grids py-lg-5 py-md-4">
       <div class="container">
-          <h3 class="hny-title mb-5">Products</h3>
+          <h3 class="hny-title mb-5"><?php echo $language['Categories'] ?></h3>
           <div class="row">
             <?php 
             while($sonuc=$sorgu->fetch()){
@@ -61,7 +61,7 @@ $sorgu = $baglanti->prepare("SELECT * FROM products");
         <a href="productsingle.php?ID=<?= $sonuc["ID"] ?>"><img class="img-thumbnail" src="assets/images/ÜRÜN GÖRSELLERİ/<?php echo $sonuc["ProductImage"]?>" alt="" class="img-fluid"></a>
         <div class="info">
             <h4><a href="blog-single.php"><?php echo $sonuc["ProductName"];?></a></h4>
-            <p>See Products </p>
+            <p><?php echo $language['See Details'] ?></p>
             <div class="dst-btm">
               
             </div>

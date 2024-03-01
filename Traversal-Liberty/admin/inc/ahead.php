@@ -39,8 +39,6 @@ include("../inc/db.php");
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Settings</a></li>
-                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
                         <li><hr class="dropdown-divider" /></li>
                         <li><a class="dropdown-item" href="#"data-toggle="modal" data-target=".modal">Logout</a></li>
                     </ul>
@@ -72,10 +70,19 @@ include("../inc/db.php");
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <div class="sb-sidenav-menu-heading">Site Stats</div>
                             <a class="nav-link <?php echo $sayfa=="Anasayfa"?"active":"" ?>" href="index.php">
-                                <div class="sb-nav-link-icon "><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
+                                <div class="sb-nav-link-icon ">  <i class="fas fa-chart-area me-1"></i></div>
+                                Stats
+                            </a><div class="sb-sidenav-menu-heading">Messages</div>
+                            <a class="nav-link  <?php echo $sayfa=="Anasayfa"?"active":"" ?>" href="contactform.php" data-bs-toggle=""aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fa-regular fa-envelope"></i></div>
+                               Messages
+                            </a>
+                            </a><div class="sb-sidenav-menu-heading">Users</div>
+                            <a class="nav-link  <?php echo $sayfa=="Anasayfa"?"active":"" ?>" href="users.php" data-bs-toggle=""aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fa-regular fa-user"></i></div>
+                               Users
                             </a>
                             <div class="sb-sidenav-menu-heading">Pages</div>
                             <a class="nav-link collapsed <?php echo $sayfa=="Anasayfa"?"active":"" ?>" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
@@ -83,11 +90,11 @@ include("../inc/db.php");
                                Pages
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                         <!--    <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="homepage.php">Home Page</a>
                                 </nav>
-                            </div>
+                            </div>-->
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="products.php">Categories</a>
@@ -97,22 +104,18 @@ include("../inc/db.php");
                                     <a class="nav-link" href="productdetails.php">Products</a>
                                 </nav>
                             </div>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="contactform.php">Contact Form</a>
-                                </nav>
-                            </div>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            
+                           <!-- <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="aboutus.php">About</a>
                                 </nav>
-                            </div>
-                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            </div>-->
+                        <!-- <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <?php if ($_SESSION['permission'] == 1) {  ?>
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="users.php">Users</a>
                                 </nav> <?php } ?>
-                            </div>
+                            </div>-->
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="catalogs.php">Catalogs</a>

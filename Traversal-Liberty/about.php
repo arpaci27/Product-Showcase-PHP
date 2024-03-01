@@ -52,10 +52,10 @@ $sonuc = $sorgu->fetch();
   <section class="w3l-about-breadcrumb text-left">
     <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
       <div class="container py-2">
-        <h2 class="title">About Us</h2>
+        <h2 class="title"><?php echo $language["About"] ?></h2>
         <ul class="breadcrumbs-custom-path mt-2">
-          <li><a href="#url">Home</a></li>
-          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> About </li>
+          <li><a href="#url"><?php echo $language["Home"] ?></a></li>
+          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> <?php echo $language["About"] ?></li>
         </ul>
       </div>
     </div>
@@ -65,10 +65,10 @@ $sonuc = $sorgu->fetch();
   <section class="w3l-cta4 py-5">
       <div class="container py-lg-5">
         <div class="ab-section text-center">
-          <h6 class="sub-title">About Us</h6>
-          <h3 class="hny-title"><?php echo $sonuc["FirstTitle"] ?>.</h3>
+          <h6 class="sub-title"><?php echo $language["About"] ?></h6>
+          <h3 class="hny-title"><?php echo $language["AboutTitle"] ?></h3>
           <p class="py-3 mb-3"><?php 
-              echo $sonuc["FirstText"];
+              echo $language["AboutText"];
               ?></p>
             <a href="services.html" class="btn btn-style btn-primary">See the products</a>
         </div>
@@ -85,21 +85,13 @@ $sonuc = $sorgu->fetch();
     <div class="container py-lg-5">
       <div class="row">
         <div class="col-lg-6 content-6-left pr-lg-5">
-          <h6 class="sub-title">Why Choose Us</h6>
-          <h3 class="hny-title">innovative, entrepreneurial and pioneer</h3>
+          <h6 class="sub-title"><?php echo $language["ChooseUsTitle"] ?></h6>
+          <h3 class="hny-title"><?php echo $language["ChooseUsTitle2"] ?></h3>
         </div>
         <div class="col-lg-6 content-6-right mt-lg-0 mt-4">
-          <p class="mb-4"> - We are innovative, entrepreneurial and pioneer <br>
-- We can do Sample-based customization <br>
-- We use Testing instruments for Quality traceability <br>
-- Our priority is to keep quality and service at the highest level <br>
-- We have a competitive price policy <br>
-- We produce using environmentally friendly and sustainable technologies <br>
-- We follow up customer demands and sector trends closely. <br>
-- We work to make each day of our customers better than the last <br>
-- We are dreaming and turning these dreams into reality... <br></p>
+          <p class="mb-4"> <?php echo $language['ChooseUs'] ?></p>
 
-              <a href="products.php" class="btn btn-style btn-primary mt-4">See the products</a>
+              <a href="products.php" class="btn btn-style btn-primary mt-4"><?php echo $language['SeeProduct'] ?></a>
         </div>
       </div>
     </div>

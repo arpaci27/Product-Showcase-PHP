@@ -1,5 +1,5 @@
 <?php
-$sayfa = "Contact Form";
+$sayfa = "Messages";
 include("inc/ahead.php");
 include("../inc/db.php");
 
@@ -13,7 +13,6 @@ include("../inc/db.php");
 
         <div class="card mb-4">
             <div class="card-header">
-               <a href="addproducts.php" class="btn btn-primary">Contact Form</a>
             </div>
             <div class="card-body">
                 <table id="dataTable" class="table table-bordered text-left text-center">
