@@ -121,16 +121,15 @@ $sonuc = $sorgu->fetch();
 
 <div class="col-lg-6 subject-card mt-lg-0 mt-4 visible">
     <div class="subject-card-header p-4">
-        <a href="#" class="card_title p-lg-4d-block">
+        <a href="products.php" class="card_title p-lg-4d-block">
             <div class="row align-items-center">
                 <div class="col-sm-5 subject-img">
-                    <img class="img-thumbnail" src="assets/images/ÜRÜN GÖRSELLERİ/<?php echo $row["ProductImage"] ?>" class="img-fluid" alt="">
+                    <img  class="img-thumbnail" src="assets/images/ÜRÜN GÖRSELLERİ/<?php echo $row["ProductImage"] ?>" class="img-fluid" alt="">
                 </div>
                 <div class="col-sm-7 subject-content mt-sm-0 mt-4">
                     <h4><?php echo $row["ProductName"] ?></h4>
                     <p>See Details</p>
-                    <div class="dst-btm">
-                    </div>
+                   
                 </div>
             </div>
         </a>
@@ -177,14 +176,13 @@ $sonuc = $sorgu->fetch();
                             </figure>
                         </div>
                     </div>
-                    <div class="maghny-gd-1 col-6">
+                    <div href="products.php" class="maghny-gd-1 col-6">
                         <div class="maghny-grid">
                             <figure class="effect-lily border-radius">
-                                <img class="img-fluid" src="assets/images/ÜRÜN GÖRSELLERİ/product 2.1.jpeg" alt="" />
+                                <img  class="img-fluid" src="assets/images/ÜRÜN GÖRSELLERİ/product 2.1.jpeg" alt="" />
                                 <figcaption>
                                     <div>
                                         <h4>Denim</h4>
-                                        <p>From 1620$ </p>
                                     </div>
 
                                 </figcaption>

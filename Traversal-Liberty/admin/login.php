@@ -57,17 +57,14 @@
                                         ?>
                                         <form method="post" action="login.php">
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="username"value="<?php echo $username ?>" type="text" name="txtUname" placeholder="UserName" />
+                                                <input class="form-control" id="username"value="<?php echo $username ?>" autocomplete="username" type="text" name="txtUname" placeholder="UserName" />
                                                 <label for="inputEmail">User Name</label>
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="password" name=" txtPassword" type="password" placeholder="Password" />
+                                                <input class="form-control" id="current-password" name=" txtPassword" type="password" placeholder="Password"autocomplete="current-password" />
                                                 <label for="inputPassword">Password</label>
                                             </div>
-                                            <div class="form-floating mb-3">
-                                                <img src="../inc/captcha.php" alt="">
-                                                <input class="form-control" id="password" name=" captcha" type="text" placeholder="Security Code" />
-                                            </div>
+                                            
                                             <div class="form-check mb-3">
                                                 <input class="form-check-input" id="inputRememberPassword" type="checkbox" name="cbRemembers" value="" />
                                                 <label class="form-check-label" for="inputRememberPassword">Remember Password</label>
@@ -81,7 +78,7 @@
                                         <script type="text/javascript" src="../assets/js/sweetalert2.all.min.js"> </script>
                                         <?php 
                                         if($_POST){
-                                            if($_SESSION['captcha']==$_POST['captcha']){
+                                            
 
                                             $sorgu=$baglanti->prepare("SELECT password, permission FROM users WHERE username=:username AND active=1 ");
                                             $sorgu->execute([
@@ -103,10 +100,7 @@
                                             echo "<script> Swal.fire( 'Error!', 'User name or password is wrong!', 'error')
                                             </script>" ;
                                         }
-                                    }else{
-                                        echo "<script> Swal.fire( 'Error!', 'Security Code is wrong!', 'error')
-                                        </script>" ;
-                                    }
+                                   
                                 }
                                 
                                         ?>

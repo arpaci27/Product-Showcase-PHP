@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
   <title><?php echo $page ?> | Easly Trade </title>
   <!-- google fonts -->
   <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -28,7 +29,7 @@
           </a></h1>
         <!-- if logo is image enable this   
       <a class="navbar-brand" href="#index.html">
-          <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+          <img src="../assets/images/easlytrade logo[1]-1.png" alt="Your logo" title="Your logo" style="height:35px;" />
       </a> -->
         <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
           data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"

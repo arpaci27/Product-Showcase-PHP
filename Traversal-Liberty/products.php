@@ -1,7 +1,6 @@
 <?php
 $page="Categories";
 include('inc/head.php');
-
 require_once('inc/db.php');
 $sorgu = $baglanti->prepare("SELECT * FROM products");
                                         $sorgu -> execute();

@@ -1,3 +1,4 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
 <i class="fa fa-whatsapp my-float"></i>
@@ -83,14 +84,11 @@
       <script>
         // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function () {
-          scrollFunction()
         };
   
         function scrollFunction() {
           if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            document.getElementById("movetop").style.display = "block";
           } else {
-            document.getElementById("movetop").style.display = "none";
           }
         }
   
