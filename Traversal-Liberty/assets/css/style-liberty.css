@@ -14881,7 +14881,7 @@ nav ul li a:hover {
 
 @media only screen and (max-width:384px) {
   .mobile-position {
-    top: 6px;
+    top: 30px;
   }
 }
 
