@@ -10,7 +10,7 @@
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
-    <body class="bg-primary">
+    <body class="bg-primary-subtle">
         <div id="layoutAuthentication">
             <div id="layoutAuthentication_content">
                 <main>
@@ -57,20 +57,16 @@
                                         ?>
                                         <form method="post" action="login.php">
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="username"value="<?php echo $username ?>" autocomplete="username" type="text" name="txtUname" placeholder="UserName" />
+                                                <input required class="form-control" id="username"value="<?php echo $username ?>" autocomplete="username" type="text" name="txtUname" placeholder="UserName" />
                                                 <label for="inputEmail">User Name</label>
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="current-password" name=" txtPassword" type="password" placeholder="Password"autocomplete="current-password" />
+                                                <input class="form-control" id="current-password" required name=" txtPassword" type="password" placeholder="Password"autocomplete="current-password" />
                                                 <label for="inputPassword">Password</label>
                                             </div>
                                             
-                                            <div class="form-check mb-3">
-                                                <input class="form-check-input" id="inputRememberPassword" type="checkbox" name="cbRemembers" value="" />
-                                                <label class="form-check-label" for="inputRememberPassword">Remember Password</label>
-                                            </div>
-                                            <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <a class="small" href="password.html">Forgot Password?</a>
+                                            
+                                            <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
                                                 <input type="submit"class="btn btn-primary" value="Enter"/>
                                            
                                             </div>
@@ -105,9 +101,7 @@
                                 
                                         ?>
                                     </div>
-                                    <div class="card-footer text-center py-3">
-                                        <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -118,7 +112,7 @@
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                            <div class="text-muted">© Copyright © 2024 Easy Trade Inc. All rights reserved. - Powered by Yusuf Altun™️</div>
                             <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;

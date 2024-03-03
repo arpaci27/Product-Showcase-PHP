@@ -4,7 +4,6 @@ include('inc/db.php');
 $tanimlama = "contactpage";
 $key = "contact";
 include('inc/head.php');
-session_start();
 
 $sorgu = $baglanti->prepare("SELECT * FROM contact");
 $sorgu->execute();
@@ -17,8 +16,8 @@ $sonuc2 = $sorgu->fetch();
       <div class="container py-2">
         <h2 class="title"><?php echo $language['GetInTouch'] ?></h2>
         <ul class="breadcrumbs-custom-path mt-2">
-          <li><a href="#url">Home</a></li>
-          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Contact </li>
+          <li><a href="#url"><?php echo $language['Home'] ?></a></li>
+          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> <?php echo $language['Contact'] ?> </li>
         </ul>
       </div>
     </div>

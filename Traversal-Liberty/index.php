@@ -13,7 +13,7 @@ $sonuc = $sorgu->fetch();
   <section class="w3l-main-slider" id="home">
     <div class="banner-content">
       <div id="demo-1"
-        data-zs-src='["assets/images/image(2).png", "assets/images/image(3).png","assets/images/image(4).png", "assets/images/image(5).png"]'
+        data-zs-src='["assets/images/image(3).png", "assets/images/image(2).png","assets/images/image(4).png", "assets/images/image(5).png"]'
         data-zs-overlay="dots">
         <div class="demo-inner-content">
           <div class="container">
@@ -110,7 +110,13 @@ $sonuc = $sorgu->fetch();
         <h3 class="hny-title"><?php echo $language['PopularProducts'] ?></h3>
       </div>
       <div class="row bottom-ab-grids">
-  <!--/row-grids-->
+  <!--/row-grids--><style>.subject-img {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.subject-img:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}</style>
   <?php 
   require_once('inc/db.php');
   $sql = "SELECT * FROM products LIMIT 5";
@@ -133,7 +139,7 @@ $sonuc = $sorgu->fetch();
                 </div>
             </div>
         </a>
-    </div><br>
+    </div><br><br>
 </div><br>
         <?php } ?>
           <!--//row-grids-->

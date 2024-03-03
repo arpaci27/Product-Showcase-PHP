@@ -21,7 +21,7 @@ Unsere Vision ist es, die erste Marke zu werden, die Kunden in einem wettbewerbs
 Kurz gesagt, wir glauben an nachhaltige Innovation, wir berühren die Träume unserer Kunden und bewegen uns schnell darauf zu, eine globale Marke im Textilbereich zu werden.
 Kontaktieren Sie uns für weitere Informationen!",
 "AboutTitle" => "Über uns",
-    "SliderTitle" => "Willkommen bei Traversal",
+    "SliderTitle" => "Willkommen bei Easly-Trade",
     "SecondTitle" => "
     Gemütlicher Chic in einem Kleid",
     "Explore" => "Erkunden",
@@ -41,6 +41,7 @@ Kontaktieren Sie uns für weitere Informationen!",
         "Message"=>"Ihre Nachricht*",
         "SendMessage"=>"Nachricht senden",
         "Map"=>"Karte",
+        "Products"=>"Produkte",
 );
 
 

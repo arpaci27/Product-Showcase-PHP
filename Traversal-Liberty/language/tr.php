@@ -23,7 +23,7 @@ $language = array("ChooseUsTite2"=>"Yenilikçi, Girişimci ve Öncü",
     Daha fazla bilgi için bizimle iletişime geçin!
     ","AboutTitle" => "Hakkımızda",
 "UsefulLinks" => "Useful Links",
-    "SliderTitle" => "Traversal'a Hoşgeldiniz",
+    "SliderTitle" => "Easly-Trade'e Hoşgeldiniz",
     "SecondTitle" => "Bir elbisede rahat şıklık!",
     "Explore" => "Keşfet",
     "PopularProducts"=> "Popüler Ürünler",
@@ -44,7 +44,7 @@ $language = array("ChooseUsTite2"=>"Yenilikçi, Girişimci ve Öncü",
         "YourEmail"=>"E-posta Adresiniz*",
         "Message"=>"Mesajınız*",
         "SendMessage"=>"Mesaj Gönder",
-        "Map"=>"Harita",
+        "Map"=>"Harita","Products"=>"Ürünler",
 );
 
 ?>

@@ -22,7 +22,7 @@ $language = array(
     Contact us for more information!",
     "UsefulLinks" => "Useful Links",
     "AboutTitle" => "About Us",
-    "SliderTitle" => "Welcome to Traversal",
+    "SliderTitle" => "Welcome to Easly-Trade",
     "SecondTitle" => "Cozy Chic in a Dress",
     "GetInTouch" => "Get In Touch",
     "Explore" => "Explore",
@@ -40,5 +40,5 @@ $language = array(
         "YourEmail"=>"Your Email*",
         "Message"=>"Your Message*",
         "SendMessage"=>"Send Message",
-        "Map"=>"Map",
+        "Map"=>"Map","Products"=>"Products",
 );

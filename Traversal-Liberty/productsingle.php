@@ -14,7 +14,7 @@ $id = $_GET["ID"];
 
     .box16 {
         opacity: 0; /* Initially hidden */
-        visibility: hidden;
+        visibility: hidden;transition: opacity 1s, transform 1s;
     }
 </style>
 <script>
@@ -37,13 +37,13 @@ $id = $_GET["ID"];
   <section class="w3l-about-breadcrumb text-left">
     <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
       <div class="container">
-        <h2 class="title">Products</h2>
+        <h2 class="title"><?php echo $language['Products'] ?></h2>
         <ul class="breadcrumbs-custom-path mt-2">
-          <li><a href="index.php">Home</a></li>
-          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span>Denım</li>
+          <li><a href="index.php"><?php echo $language['Home'] ?></a></li>
+          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span><?php echo $language['Products'] ?></li>
         </ul>
       </div>
-    </div>
+    </div><style></style>
   </section>
   <?php
 $sorgu = $baglanti->prepare("SELECT p.*, pd.*, pdi.* 

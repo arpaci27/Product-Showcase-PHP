@@ -17,6 +17,21 @@ if(!isset($_SESSION['language'])){
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title><?php echo $page ?> | Easly Trade </title>
+  <link rel="icon" type="image/x-icon" href="assets/images/easlytrade logo[1]-1.png ">
+  <meta name="description" content="Easly Trade is a leading textile manufacturer in Istanbul, Turkey, specializing in sustainable and ethical production of knitwear, hoodies, t-shirts, and more for global brands.">
+    <meta name="keywords" content="Easly Trade, textile production, sustainable fashion, ethical manufacturing, Istanbul, Turkey, knitwear, hoodies, t-shirts, jeans, dresses, shirts, tracksuits, scarves, beanies">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.easlytrade.com">
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Easly Trade - Sustainable Textile Production in Istanbul, Turkey">
+    <meta property="og:description" content="Easly Trade is a leading textile manufacturer in Istanbul, Turkey, specializing in sustainable and ethical production of knitwear, hoodies, t-shirts, and more for global brands.">
+    <meta property="og:image" content="https://www.easlytrade.com/products.php">
+    <meta property="og:url" content="https://www.easlytrade.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Easly Trade - Sustainable Textile Production in Istanbul, Turkey">
+    <meta name="twitter:description" content="Easly Trade is a leading textile manufacturer in Istanbul, Turkey, specializing in sustainable and ethical production of knitwear, hoodies, t-shirts, and more for global brands.">
+    <meta name="twitter:image" content="https://www.easlytrade.com/products.php">
   <!-- google fonts -->
   <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="//fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap"
@@ -33,14 +48,14 @@ if(!isset($_SESSION['language'])){
   <!--header-->
   <header id="site-header" class="fixed-top">
     <div class="container">
-      <nav class="navbar navbar-expand-lg stroke">
-        <h1><a class="navbar-brand mr-lg-5" href="index.php">
-          Easly Trade
-          </a></h1>
-        <!-- if logo is image enable this   
-      <a class="navbar-brand" href="#index.html">
-          <img src="../assets/images/easlytrade logo[1]-1.png" alt="Your logo" title="Your logo" style="height:35px;" />
-      </a> -->
+      <nav class="navbar navbar-expand-lg stroke"><a class="navbar-brand" href="index.php">
+          <img src="assets/images/easlytrade logo[1]-1.png" alt="Your logo" title="Your logo" style="height: 75px ;margin: 5px" />
+      </a> 
+     <!--    <h1><a class="navbar-brand mr-lg-5" href="index.php">
+           Easly Trade
+          </a></h1>-->
+        <!-- if logo is image enable this   -->
+     
         <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
           data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
           aria-label="Toggle navigation">

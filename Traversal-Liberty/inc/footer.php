@@ -63,15 +63,13 @@
             </div>
             <div class="columns-2 mt-lg-0 mt-3">
               <ul class="social">
-                <li><a href="#facebook"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+                <li><a href="https://www.facebook.com/profile.php?id=100085916282761"><span class="fa fa-facebook" aria-hidden="true"></span></a>
                 </li>
-                <li><a href="#linkedin"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+                <li><a href="https://www.linkedin.com/in/easly-trade-a33234250/"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
                 </li>
-                <li><a href="#twitter"><span class="fa fa-twitter" aria-hidden="true"></span></a>
+                <li><a href="https://twitter.com/easlytrade"><span class="fa fa-twitter" aria-hidden="true"></span></a>
                 </li>
-                <li><a href="#google"><span class="fa fa-google-plus" aria-hidden="true"></span></a>
-                </li>
-                <li><a href="#github"><span class="fa fa-github" aria-hidden="true"></span></a>
+                <li><a href="https://tr.pinterest.com/easlytrade/?invite_code=8b9df82e3a4f4809ad6b56e4656c26a6&sender=969118550973331489"><span class="fa fa-brands fa-pinterest-p" aria-hidden="true"></span></a>
                 </li>
               </ul>
             </div>
