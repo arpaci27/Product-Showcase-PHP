@@ -74,7 +74,7 @@ $sonuc = $sorgu->fetch();
         </div>
         <div class="row mt-5">
           <div class="col-md-9 mx-auto">
-            <img src="assets/images/image(4).png" class="img-fluid" alt="">
+            <img src="assets/images//22323.webp" class="img-fluid" alt="">
           </div>
         </div>
       </div>
@@ -95,7 +95,20 @@ $sonuc = $sorgu->fetch();
         </div>
       </div>
     </div>
-</section>
+</section><style>
+.centered-items {
+    display: flex;
+    justify-content: center; /* This centers the items horizontally */
+    align-items: center; /* This centers the items vertically (if needed) */
+    flex-wrap: wrap; /* This allows items to wrap in multiple lines as needed */
+}
+
+/* Optional: Ensure each product item has a consistent base size */
+.centered-items .col-md-4, .centered-items .col-sm-6 {
+    flex: 0 0 auto; /* Prevent flex items from growing or shrinking */
+    max-width: none; /* Override Bootstrap's max-width for flex items */
+}
+</style>
 <!-- //content-6-->
 <section class="w3l-grids1">
   <div class="hny-three-grids py-5">

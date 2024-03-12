@@ -13,7 +13,7 @@ $sonuc = $sorgu->fetch();
   <section class="w3l-main-slider" id="home">
     <div class="banner-content">
       <div id="demo-1"
-        data-zs-src='["assets/images/image(3).png", "assets/images/image(2).png","assets/images/image(4).png", "assets/images/image(5).png"]'
+        data-zs-src='["assets/images/banner5.png", "assets/images/image (9).png","assets/images/zeyit.webp", "assets/images/arpaci.webp"]'
         data-zs-overlay="dots">
         <div class="demo-inner-content">
           <div class="container">
@@ -150,7 +150,7 @@ $sonuc = $sorgu->fetch();
   <!-- stats -->
 
   <!-- //stats -->
-  <!--/-->
+  <!--/
   <div class="best-rooms py-5 visible">
     <div class="container py-md-5">
         <div class="ban-content-inf row">
@@ -225,7 +225,7 @@ $sonuc = $sorgu->fetch();
             </div>
         </div>
     </div>
-</div>
+</div>-->
   <!-- //stats -->
   <!--/w3l-bottom-->
   <section class="w3l-bottom py-5">

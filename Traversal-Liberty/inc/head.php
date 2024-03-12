@@ -48,12 +48,10 @@ if(!isset($_SESSION['language'])){
   <!--header-->
   <header id="site-header" class="fixed-top">
     <div class="container">
-      <nav class="navbar navbar-expand-lg stroke"><a class="navbar-brand" href="index.php">
-          <img src="assets/images/easlytrade logo[1]-1.png" alt="Your logo" title="Your logo" style="height: 75px ;margin: 5px" />
-      </a> 
-     <!--    <h1><a class="navbar-brand mr-lg-5" href="index.php">
-           Easly Trade
-          </a></h1>-->
+      <nav class="navbar navbar-expand-lg stroke">
+         <h1><a class="navbar-brand mr-lg-5" href="index.php"style="text-transform: lowercase;">
+         arpaci.net
+          </a></h1>
         <!-- if logo is image enable this   -->
      
         <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
@@ -81,9 +79,7 @@ if(!isset($_SESSION['language'])){
 
               </a>
             </li>
-            <li class="nav-item <?php if($page=="Catalog") echo "active" ?>"> 
-              <a class="nav-link" href="catalogs.php"><?php echo $language['Catalog']?></a>
-            </li>
+            
             <li class="nav-item <?php if($language=="tr") echo "active" ?>"> 
               <a class="nav-link" href="language.php?language=tr">TR</a>
             </li>

@@ -57,9 +57,11 @@ $sorgu = $baglanti->prepare("SELECT * FROM products");
 
             
             ?>
-              <div class="col-lg-4 col-md-4 col-6 hidden">
+              <div class="col-lg-4 col-md-4 col-6 hidden" style="padding-right: 40px;">
     <div class="column">
-        <a href="productsingle.php?ID=<?= $sonuc["ID"] ?>"><img class="img-thumbnail" src="assets/images/ÜRÜN GÖRSELLERİ/<?php echo $sonuc["ProductImage"]?>" alt="" class="img-fluid"></a>
+       <a href="#"><img class="img-thumbnail" src="assets/images/ÜRÜN GÖRSELLERİ/<?php echo $sonuc["ProductImage"]?>" alt="" class="img-fluid"></a>
+      
+    <!--<a href="productsingle.php?ID=<?= $sonuc["ID"] ?>"><img class="img-thumbnail" src="assets/images/ÜRÜN GÖRSELLERİ/<?php echo $sonuc["ProductImage"]?>" alt="" class="img-fluid"></a>-->
         <div class="info">
             <h4><a href="blog-single.php"><?php echo $sonuc["ProductName"];?></a></h4>
             <p><?php echo $language['See Details'] ?></p>

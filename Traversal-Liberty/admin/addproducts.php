@@ -27,7 +27,7 @@ if($_POST){
         if($_FILES['ProductImage']['error'] != 0){
             $hata.="Image is not selected.";
         }else{
-            copy($_FILES['ProductImage']['tmp_name'], "../assets/images/ÜRÜN GÖRSELLERİ/".strtolower($_FILES['ProductImage']['name']));
+            copy($_FILES['ProductImage']['tmp_name'], "../assets/images/ÜRÜN GÖRSELLERİ/".($_FILES['ProductImage']['name']));
             $ekleSorgu =$baglanti->prepare("INSERT INTO products SET ProductName=:ProductName, Description=:Description, ProductImage=:ProductImage, Link=:Link,  Active=:Active ");
             $ekle=$ekleSorgu->execute([
                 'ProductName'=>($_POST['ProductName']),

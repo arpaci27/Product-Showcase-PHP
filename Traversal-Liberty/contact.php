@@ -86,10 +86,10 @@ $sonuc2 = $sorgu->fetch();
                 require "inc/class.phpmailer.php"; // PHPMailer dosyamızı çağırıyoruz  
                 $mail = new PHPMailer();
                 $mail->IsSMTP();
-                $mail->From     = "deneme@mesutd.com"; //Gönderen kısmında yer alacak e-mail adresi  
+                $mail->From     = $_POST["txtEmail"]; //Gönderen kısmında yer alacak e-mail adresi  
                 $mail->Sender   = $_POST["txtEmail"];
                 $mail->FromName = $_POST["txtName"];
-                $mail->Host     = "mail.mesutd.com"; //SMTP server adresi  
+                $mail->Host     = "mail.easlytrade.com"; //SMTP server adresi  
                 $mail->SMTPAuth = true;
                 $mail->Username = "deneme@mesutd.com"; //SMTP kullanıcı adı  
                 $mail->Password = "*****"; //SMTP şifre  
@@ -102,7 +102,7 @@ $sonuc2 = $sorgu->fetch();
             
                 $mail->Body = "mesaj";
                 $mail->AltBody = strip_tags("mesaj");
-                $mail->AddAddress("deneme@mesutd.com");
+                $mail->AddAddress("info@easlytrade.com");
                 return ($mail->Send())?true:false;
                 $mail->ClearAddresses();
                 $mail->ClearAttachments();
