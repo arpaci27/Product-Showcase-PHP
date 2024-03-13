@@ -34,7 +34,7 @@
             <div class="col-lg-6 column">
               <div class="row">
                 <div class="col-md-4 column">
-                  <h3>EaslyTrade</h3>
+                  <h3>Arpaci.net</h3>
                   <ul class="footer-gd-16">
                     <li><a href="index.php"><?php echo $language['Home'] ?></a></li>
                     <li><a href="about.php"><?php echo $language['About'] ?></a></li>

@@ -133,13 +133,12 @@ $sonuc2 = $sorgu->fetch();
       </div>
       <div class="map mt-5 pt-md-5">
         <h5><?php echo $language['Map'] ?></h5>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.513458416145!2d28.796636076531506!3d41.07962671502776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa58830b0fa25%3A0xdc55111a8a343ad2!2sZiya%20G%C3%B6kalp%2C%20Esenler%20Oto%20Sanayi%20Sitesi%20No%3A20%2C%2034490%20%C4%B0kitelli%20Osb%2FBa%C5%9Fak%C5%9Fehir%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1709168967098!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d101856.98668823444!2d37.3365207!3d37.0805725!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1531e6b4f7f18c2f%3A0xc02e8b35116baad0!2sGaziantep!5e0!3m2!1str!2str!4v1710368650564!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
 </section>
 <!-- /contact-form -->
 
-  <!--/w3l-footer-29-main-->
  
       <?php
 include('inc/footer.php');

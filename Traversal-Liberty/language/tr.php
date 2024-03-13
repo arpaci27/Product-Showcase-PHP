@@ -1,15 +1,11 @@
 <?php
 
 $language = array("ChooseUsTite2"=>"Yenilikçi, Girişimci ve Öncü",
-"ChooseUs"=>"- Yenilikçiyiz, girişimciyiz ve öncüyüz <br>
-- Örnek tabanlı özelleştirme yapabiliriz <br>
-- Kalite izlenebilirliği için Test araçlarını kullanıyoruz <br>
-- Önceliğimiz kalite ve hizmeti en üst seviyede tutmaktır <br>
-- Rekabetçi bir fiyat politikamız var <br>
-- Çevre dostu ve sürdürülebilir teknolojiler kullanarak üretiyoruz <br>
-- Müşteri taleplerini ve sektör trendlerini yakından takip ederiz. <br>
-- Müşterilerimizin her gününü bir öncekinden daha iyi hale getirmek için çalışıyoruz <br>
-- Hayal ediyoruz ve bu hayalleri gerçeğe dönüştürüyoruz... <br>",
+"ChooseUs"=>"<strong>Kaliteye Olan Bağlılığımız:</strong> Ürünlerimiz organik olarak yetiştirilmekte olup, zararlı kimyasallardan arındırılmış en sağlıklı yiyecekleri sunmayı taahhüt ederiz.
+<br> <strong>Şeffaflık:</strong> Çiftliklerimizden sofranıza kadar olan her süreç şeffaftır, ürünlerimize gösterdiğimiz özeni görebilmenizi sağlar.
+<br> <strong>Yereli Desteklemek:</strong> ARPACI'yı tercih ederek yerel çiftçileri destekler ve ulusal ekonominin güçlenmesine katkıda bulunursunuz.
+<br> <strong>Sürdürülebilirlik:</strong> Çevreyi koruyan ve gelecek nesillerin refahını sağlayan sürdürülebilir uygulamalara adanmış durumdayız.
+<br> <strong>Gelenekte Yenilik:</strong> Geleneksel metodlara derinden bağlıyken, ürünlerimizi ve hizmetlerimizi geliştirmek için sürekli yenilikçi yollar ararız.  ",
     "ChooseUsTitle2"=> "Yenilikçi, Girişimci ve Öncü",
 "ChooseUsTitle" => "Neden Bizi Tercih Etmelisiniz?",
     "AboutText" => "
@@ -24,12 +20,12 @@ $language = array("ChooseUsTite2"=>"Yenilikçi, Girişimci ve Öncü",
     ","AboutTitle" => "Hakkımızda",
 "UsefulLinks" => "Useful Links",
     "SliderTitle" => "arpaci.net'e Hoşgeldiniz",
-    "SecondTitle" => "Bir elbisede rahat şıklık!",
+    "SecondTitle" => "Sağlık ve kalite bir arada !",
     "Explore" => "Keşfet",
     "PopularProducts"=> "Popüler Ürünler",
         "GetInTouch" => "İletişime Geçin",
         "See Details" => "Detayları Gör",
-        "CopyRight" => "© Telif Hakkı © 2024 Easy Trade Inc. Tüm hakları saklıdır. - Yusuf Altun™️ tarafından desteklenmektedir.",
+        "CopyRight" => "Telif Hakkı © 2024 Arpaci.net Inc. Tüm hakları saklıdır. -Arpaci.dev™️ tarafından desteklenmektedir. ",
         "Home" => "Ana Sayfa",
         "Contact" => "İletişim",
         "About" => "Hakkımızda",
